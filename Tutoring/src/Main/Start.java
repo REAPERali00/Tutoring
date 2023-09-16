@@ -1,6 +1,6 @@
 package Main;
 
-public class Main {
+public class Start {
 
 	private static Usage use = new Usage();
 
