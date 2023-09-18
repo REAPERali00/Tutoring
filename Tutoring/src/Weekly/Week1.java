@@ -28,7 +28,7 @@ public class Week1 {
 		String name; 
 		double calPerHour ; 
 		double hours; 
-		
+	
 		//Register the exercise: 
 		exc.registery("Running", 250);
 		exc.registery("Walking", 120);
