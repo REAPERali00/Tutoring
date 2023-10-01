@@ -7,10 +7,10 @@ public class Philip {
 		Test test3 = new Test();
 		Test test = new Test();
 		Test test2 = new Test();
-		test.n = 10;
-		test2.n = test.n;
-		System.out.println(test.n);
-		System.out.println(test2.n);
+//		test.n = 10;
+//		test2.n = test.n;
+//		System.out.println(test.n);
+//		System.out.println(test2.n);
 		
 		Scanner scan = new Scanner(System.in);
 		//test.author("Ali");
