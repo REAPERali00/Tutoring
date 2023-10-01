@@ -11,5 +11,9 @@ public class Test {
 	public int addNum(int n, int m) {
 		return n + m; 
 	}
+	
+	public double devideNum(double n, double m) {
+		return n/m;
+	}
 
 }

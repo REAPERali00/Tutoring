@@ -59,6 +59,6 @@ public class Jatin {
 	}
 	
 	public static void main(String[] args) {
-		newWay(10);
+		newWay(100);
 	}
 }
