@@ -12,8 +12,17 @@ public class Test {
 		return n + m; 
 	}
 	
-	public double devideNum(double n, double m) {
-		return n/m;
+	public int devideNum(int n, int m) {
+		return n /m;
+	}
+	
+	public void printHelloWorld() {
+		System.out.println("Hello world");
+		author("Ali");
+	}
+	
+	public int remainder (int num1, int num2) {
+		return num1 % num2; //Modula
 	}
 
 }
