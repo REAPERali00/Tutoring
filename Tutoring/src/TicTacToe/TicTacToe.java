@@ -44,7 +44,7 @@ public class TicTacToe {
 	}
 	
 	public boolean checkTie() {
-		return counter < 10;
+		return counter  >= 9 && !checkWin() ;
 	}
 	
 
@@ -77,7 +77,11 @@ public class TicTacToe {
 				scan.next();
 			}
 			
-		}while(!checkWin());
-		System.out.println("Congrats! you won!");
+		}while(!checkWin() && !checkTie());
+		if(checkTie())
+			System.out.println("Its a tie!");
+		else
+			System.out.println("Congrats! you won!");
+		counter =0;
 	}
 }

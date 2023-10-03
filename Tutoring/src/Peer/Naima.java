@@ -8,8 +8,8 @@ public class Naima {
  * Topics: 
  * 0. Error types: Sysntax, Compile time, Run time, Logical 
  * 1. Variables: primitive and reference 
- * 2. Methods : code that is written somewhere else, and has a name. 
- * 3. Class, how to use code that is written in a different file. 
+ * 2. Methods : code that is written somewhere else, and has a name.A method has a return type and a parameter. 
+ * 3. Class, how to use code that is written in a different file. l
  * 4. Class detail: instance variables, getter and setter (access modifiers) , 
  * 		Constructors, other methods inside class. 
  * 
@@ -60,16 +60,21 @@ public class Naima {
 //		System.out.println(new Test().n);
 	}
 
-	
-	public static void main(String[] args) {
+	public static void secondSession() {
 		Scanner scan = new Scanner(System.in);
 		int age = 0; 
-		System.out.println("Enter your age: ");
+		System.out.print("Enter your age: ");
 		age = scan.nextInt();
 		System.out.println("you are " + age + " years old.");
 		
-		
+		System.out.println("Enter your name: ");
+		String name = scan.next();
+		System.out.printf("Hello %s", name);
 		scan.close();
+	}
+
+	public static void main(String[] args) {
+		secondSession();
 	}
 
 }

@@ -1,35 +1,31 @@
 package Peer;
 
 public class Circle {
-	//Instance variables 
+	//Instance variable: 
 	private int rad;
 	
-	//Constructor: 
-	//Default: 
+	//Default Costructor
 	public Circle() {
-		rad = 0;
+		rad = -1;
 	}
-	
-	//Non default constructor
+	//Non default: 
 	public Circle(int newRad) {
 		rad = newRad;
 	}
 	
-	
+	//Getter: return the value of rad
 	public int getRad() {
 		return rad;
 	}
-
-	public void setRad(int rad) {
-		this.rad = rad;
-	} 
+	
+	//Setter: changes the value of rad
+	public void setRad(int newRad) {
+		rad = newRad;
+	}
+	
 	
 	public double area() {
-		return Math.PI * Math.pow(rad,2);
+		return Math.PI * Math.pow(rad, 2);  
 	}
 	
-	@Override
-	public String toString() {
-		return String.format("The rad of the circle is %d and the area is %.2f\n", rad, area());
-	}
 }

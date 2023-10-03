@@ -21,28 +21,30 @@ public class TicGUI extends JFrame{
 	private JButton buttons[]; 
 	private JLabel label; 
 	private int dim;
+	private int counter;
 	Font font = new Font("Monaco", Font.BOLD, 16); 
-	
+
 	private String[] player = {"X", "O"};
 	private Color[] colors = {Color.darkGray, Color.LIGHT_GRAY};
 	private int turn;
 	private String[] board; 
-	
+
 	public TicGUI(){
 		dim = 3;
 		turn = 0;
+		counter = 0;
 		board = new String[dim*dim];
 		pane = new JPanel(new BorderLayout());
 		game = new JPanel(new GridLayout(dim,dim));
 		label = new JLabel("Tic Tac To");
 	}
-	
+
 	public void start() {
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.setPreferredSize(new Dimension(300,300));
-		
+
 		setInterface();
-		
+
 		this.add(pane);
 		this.setVisible(true);
 		this.pack();
@@ -56,7 +58,7 @@ public class TicGUI extends JFrame{
 		addAction(new Listener());
 		pane.add(game, BorderLayout.CENTER);
 	}
-	
+
 	private void setGame() {
 		buttons = new JButton[dim*dim];
 		for(int i = 0; i < dim*dim; i++) {
@@ -66,14 +68,14 @@ public class TicGUI extends JFrame{
 			game.add(buttons[i]);
 		}
 	}
-	
+
 	private void addAction(ActionListener listener) {
 		for(int i = 0; i < dim*dim; i++) {
 			buttons[i].setActionCommand(Integer.toString(i));
 			buttons[i].addActionListener(listener);
 		}
 	}
-	
+
 	private void playerMove(int ind) {
 		if(ind < 0 || ind >= dim*dim)
 			return;
@@ -82,9 +84,12 @@ public class TicGUI extends JFrame{
 			buttons[ind].setBackground(colors[turn]);
 			buttons[ind].setText(player[turn++]);
 			turn %= 2;
+			counter++;
 		}
 	}
-	
+	public boolean checkTie() {
+		return counter  >= 9;
+	}	
 	private boolean checkWin() {
 
 		for (int i = 0; i < dim; i++) {
@@ -105,17 +110,18 @@ public class TicGUI extends JFrame{
 		}
 		return false;
 	}
-	
+
 	private void reset() {
 		for (int i = 0; i < dim * dim; i++) {
 			board[i] = "";
-            buttons[i].setText("");
-            buttons[i].setBackground(null);
-            buttons[i].setEnabled(true);
-        }
-        turn = 0;
+			buttons[i].setText("");
+			buttons[i].setBackground(null);
+			buttons[i].setEnabled(true);
+		}
+		turn = 0;
+		counter = 0;
 	}
-	
+
 	class Listener implements ActionListener {
 
 		@Override
@@ -123,9 +129,11 @@ public class TicGUI extends JFrame{
 			int actionInd = Integer.parseInt(e.getActionCommand());
 			playerMove(actionInd);		
 			if(checkWin()) {
+				turn++;
+				turn %= 2;
 				int result = JOptionPane.showConfirmDialog(TicGUI.this,
-                        "Player " + player[turn-1] + " wins!\nDo you want to play again?", "Game Over",
-                        JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
+						"Player " + player[turn] + " wins!\nDo you want to play again?", "Game Over",
+						JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
 				if(result == JOptionPane.YES_OPTION) {
 					reset();
 				}
@@ -133,8 +141,19 @@ public class TicGUI extends JFrame{
 					System.exit(0);
 				}
 			}
-			
+			else if(checkTie()) {
+				int result = JOptionPane.showConfirmDialog(TicGUI.this,
+						"Its a Tie!\nDo you want to play again?", "Game Over",
+						JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
+				if(result == JOptionPane.YES_OPTION) {
+					reset();
+				}
+				else {
+					System.exit(0);
+				}
+			}
+
 		}
-		
+
 	}
 }
