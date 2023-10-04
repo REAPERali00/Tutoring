@@ -64,17 +64,37 @@ public class Naima {
 		Scanner scan = new Scanner(System.in);
 		int age = 0; 
 		System.out.print("Enter your age: ");
-		age = scan.nextInt();
+		//age = scan.nextInt();
 		System.out.println("you are " + age + " years old.");
 		
-		System.out.println("Enter your name: ");
+		System.out.print("Enter your name: ");
 		String name = scan.next();
-		System.out.printf("Hello %s", name);
+		/*
+		 * int: %d
+		 * double & float: %f
+		 * String: %s 
+		 * Char: %c 
+		 * 
+		 */
+		System.out.printf("\"Hello\" %s\n", name); 
+		System.out.println("Bye!");
 		scan.close();
+		
+		
 	}
 
+	/**
+	 * Make a circle, that has a radius. 
+	 * make the rad, and a mehtod to calc the area. 
+	 * make use of Constructors, getters, setters. 
+	 * toString method. 
+	 * 
+	 */
 	public static void main(String[] args) {
-		secondSession();
+		Test test = new Test();
+		test.setId(-12);
+		System.out.println(test);
+		
 	}
 
 }
