@@ -1,6 +1,16 @@
 package Peer;
 
-
+/**
+ * Example to do: 
+ * 1. Create a circle class
+ * 2. add a variable radius as in instance variable 
+ * 3. Create a method to calculate the area (pi * r^2) and return the result
+ * 	  Note: you can get pi from Math.PI
+ * 4. if you had time, try to create a default constructor for the class
+ * 5. create getters & setters for the class and make the radius variable private
+ * 
+ *
+ */
 public class Linda {
 	/**
 	 * 
