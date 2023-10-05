@@ -1,7 +1,7 @@
 package Peer;
 
 public class Test {
-	public int n; //instance variable 
+	public  int n; //instance variable 
 	private int id; 
 	
 	//Getter: returns the value
@@ -30,23 +30,12 @@ public class Test {
 		System.out.println("the author is " + name);
 	}
 	
-	public int addNum(int n, int m) {
-		return n + m; 
+	public void printHello(String name) {
+		System.out.println("Hello " + name);
 	}
-	
-	public int devideNum(int n, int m) {
-		return n /m;
+	public int devide(int n, int m) {
+		return n/m;
 	}
-	
-	public void printHelloWorld() {
-		System.out.println("Hello world");
-		author("Ali");
-	}
-	
-	public int remainder (int num1, int num2) {
-		return num1 % num2; //Modula
-	}
-	
 	@Override
 	public String toString() {
 		return String.format("The test id is %d", id);

@@ -1,15 +1,16 @@
 package test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class DecisionStructures {
 	private int year;
 
-	private List<String> gameChoices = Arrays.asList("Paper", "Rock", "Scissor");
+	private ArrayList<String> gameChoices = new ArrayList<>(Arrays.asList("Paper", "Rock", "Scissor"));
 	
 	public DecisionStructures() {
-		dummyMain();
+//		dummyMain();
 	}
 
 	public DecisionStructures(int year) {

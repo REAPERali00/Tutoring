@@ -24,6 +24,15 @@ public class Usage {
 	private String[] options = {"Tic Tac To Game (CommandLine)", "Calculator", "Window", 
 			"Print X", "Tic Tac To (GUI)", "Exercise", "Exit"};
 	public Scanner scan = new Scanner(System.in);
+	public enum Choices{
+		TICTACTOE_C, 
+		CALC, 
+		WINDOW, 
+		PRINTX, 
+		TICTACTOE_GUI, 
+		EXERCISE, 
+		EXIT
+	}
 	
 	public void menu() {
 		int i = 0;
