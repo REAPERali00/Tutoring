@@ -1,32 +1,19 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
+#include "main.h"
 
 
-typedef struct {
-	int size;
-	int* array;
-}Array;
-
-#define MENU_SIZE 4
-enum options {
-	EXIT, 
-	REVERSE, 
-	RANDOM, 
-	SORT, 
-	ERROR
-};
-char* menuPrint[] = {
-	"(%d) : exit\n",
-	"(%d) : reverse array\n",
-	"(%d) : randomize array\n",
-	"(%d) : sort array\n", 
-	"Sorry, this option is not available yet\n"
-};
-
-void createArr(Array* );
-void printArr(Array* );
-void swap(int* , int* );
-void reverseArr(Array* );
+int main() {
+	Array arr;
+	createArr(&arr);
+	printArr(&arr);
+	while (RUNNING) {
+		menuExe(menu(), &arr);
+	}
+	free(arr.array);
+	return EXIT_SUCCESS;
+}
 
 
 int menu() {
@@ -47,12 +34,12 @@ void menuExe(int choice, Array* arr) {
 		exit(EXIT_SUCCESS);
 		break;
 	case REVERSE:
-		reverseArr(&arr);
-		printArr(&arr);
+		reverseArr(arr);
+		printArr(arr);
 		break;
 	case RANDOM:
-
-		printf(menuPrint[ERROR]);
+		randomize(arr);
+		printArr(arr);
 		break;
 	case SORT:
 
@@ -61,17 +48,6 @@ void menuExe(int choice, Array* arr) {
 	default: 
 		printf(menuPrint[ERROR]);
 	}
-}
-int main() {
-	Array arr;
-	menu();
-	//createArr(&arr);
-	//printArr(&arr);
-	//reverseArr(&arr);
-	//printArr(&arr);
-	return EXIT_SUCCESS;
-
-
 }
 
 void createArr(Array* arr) {
@@ -115,3 +91,13 @@ void reverseArr(Array* arr) {
 	}
 }
 
+void randomize(Array* arr) {
+	srand(1964);
+	int random = 0, bound = arr->size-1; 
+
+	for (int i = 0; i < arr->size; i++) {
+		random = rand() % bound;
+		if(i != random)
+			swap(&(arr->array[i]), &(arr->array[random]));
+	}
+}
