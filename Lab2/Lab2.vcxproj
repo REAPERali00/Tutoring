@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
+    <ClCompile Include="practice.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h" />

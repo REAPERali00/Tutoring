@@ -6,8 +6,11 @@ typedef struct {
 	int* array;
 }Array;
 
+typedef char* string; 
+
 #define MENU_SIZE 4
 #define RUNNING 1
+#define MAX_SIZE 50
 
 enum options {
 	EXIT, 
@@ -29,6 +32,7 @@ void printArr(Array* );
 void swap(int* , int* );
 void reverseArr(Array* );
 void randomize(Array* );
+Array* copyArr(Array* arr);
 int menu();
 void menuExe(int , Array*);
 
