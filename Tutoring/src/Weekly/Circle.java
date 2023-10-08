@@ -33,7 +33,7 @@ public class Circle {
 	
 	//Other: 
 	public double area() {
-		return Math.PI * Math.pow(radius, 2);
+		return Math.PI * Math.pow(radius, 2);//radius * radius 
 	}
 	
 	@Override

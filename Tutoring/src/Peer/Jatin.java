@@ -58,7 +58,46 @@ public class Jatin {
 		}
 	}
 	
+	
+	public static void printArr(int arr[]) {
+		for(int i : arr)
+			System.out.print(i + " ");
+		System.out.println();
+	}
+	
+	public static int[] copy(int[] arr) {
+		int copy[] = new int[arr.length];
+		for(int i = 0; i < arr.length; i++) {
+			copy[i] = arr[i];
+		}
+		return copy;
+	}
+	
+	public static int[] reverse(int[] arr) { // 5 4 3 2 1
+		int temp; 
+		for(int i =0; i < arr.length/2; i++) { //i = 2
+			temp = arr[i]; // temp = 2 
+			arr[i] = arr[arr.length - 1 - i];// arr[1] =  4
+			arr[arr.length - 1 - i] = temp; //arr[5 -1 - 1] = 2
+		}
+		return arr;
+	}
+	
+	public static boolean palindrom(String value) { //Racecar 
+		for(int i = 0; i < value.length()/2; i++) {
+			if(value.charAt(i) != value.charAt(value.length() - 1 - i))
+				return false;
+		}
+		return true;
+	}
+	
 	public static void main(String[] args) {
-		newWay(100);
+		int arr[] = {1,2,3, 4, 6, 5, 10};
+		
+		String pal = "1";
+	//	printArr(arr);
+		if(palindrom(pal))
+			System.out.println(pal + " is palindrome.");
+			
 	}
 }

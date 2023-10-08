@@ -83,7 +83,12 @@ public class Naima {
 		
 		
 	}
-
+	
+	public static void thirdSession() {
+		
+	}
+	
+	
 	/**
 	 * Make a circle, that has a radius. 
 	 * make the rad, and a mehtod to calc the area. 
@@ -94,9 +99,7 @@ public class Naima {
 	 * 
 	 */
 	public static void main(String[] args) {
-		Test test = new Test();
-		test.setId(-12);
-		System.out.println(test);
+		thirdSession();
 		
 	}
 
