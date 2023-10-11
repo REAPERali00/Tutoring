@@ -23,19 +23,31 @@ class Dynamic{
 }
 
 class A{
+	private int age;
+	A(){
+		
+	}
 	A(int n){
 		System.out.println("A" + n);
 	}
 
 	public void print() {
-		System.out.println("hello world");
+		System.out.printf("Hello world\n");
 	}
+	
+
 }
 class B extends A{
 	B(){
 		super(10);
 		System.out.println("B");
+		
+	}
+	
+	@Override
+	public void print() {
 		super.print();
+		System.out.println("Good bye world");
 	}
 }
 public class Conor {
@@ -75,17 +87,22 @@ public class Conor {
 		ArrayList<String> list = new ArrayList<>(Arrays.asList(arr));
 		printArr(list);
 	}
+	
 	public static void print2(ArrayList arr){
 		for(int i = 0; i < arr.size(); i++) {
 			System.out.print(arr.get(i) +" " );
 
 		}
 	}
+	
+	
+	public static void labExam() {
+		A a = new B();
+		System.out.printf("%5s|%7d\n", "Ali", 123);
+	}
+	
 	public static void main(String[] args) {
-		//Array list practice: Make a game! 
-		DecisionStructures desc = new DecisionStructures();	
-		RPS rps = new RPS();
-		rps.start();
+		labExam();
 	}
 
 
