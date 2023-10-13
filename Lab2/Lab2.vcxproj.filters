@@ -21,9 +21,15 @@
     <ClCompile Include="practice.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="third.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h">
+    <ClInclude Include="Lab2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
