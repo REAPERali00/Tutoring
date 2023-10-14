@@ -24,15 +24,17 @@ public class Usage {
 	private String[] options = {"Tic Tac To Game (CommandLine)", "Calculator", "Window", 
 			"Print X", "Tic Tac To (GUI)", "Exercise", "Exit"};
 	public Scanner scan = new Scanner(System.in);
-	public enum Choices{
-		TICTACTOE_C, 
-		CALC, 
-		WINDOW, 
-		PRINTX, 
-		TICTACTOE_GUI, 
-		EXERCISE, 
-		EXIT
-	}
+	
+	private Runnable[] exe = {
+		()->tic(0), 
+		()->calc(),
+		()->window(),
+		()->printX(),
+		()->tic(1),
+		()->exercise(),
+		()->System.exit(0),
+		()->System.out.println("Option to be implemented. ")
+	};
 	
 	public void menu() {
 		int i = 0;
@@ -52,6 +54,15 @@ public class Usage {
 	}
 	
 	public void execMenu(int i) {
+		if(i > options.length ||  i < 1) {
+			exe[exe.length-1].run();
+			menu();
+		}
+		exe[i-1].run();
+		menu();
+	}
+	
+	public void execMenu1(int i) {
 		if (i == options.length)
 			return;
 		switch (i) {
