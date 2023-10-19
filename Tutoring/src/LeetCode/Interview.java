@@ -164,5 +164,49 @@ public class Interview {
 		return j;
 	}
 	
+	/*
+	 * Given an array nums of size n, return the majority element.
+	 * 
+	 * The majority element is the element that appears more than [n / 2] times. You
+	 * may assume that the majority element always exists in the array.
+	 */
+	public int majorityElementFirstAttempt(int[] nums) {
+        int count = 0, current = nums[0]; 
+        for(int i = 0; i < nums.length; i++){
+            current = nums[i]; 
+            for(int j = 0; j < nums.length; j++){
+                if(nums[j] == nums[i])
+                    count++; 
+            }
+            if(count > nums.length/ 2)
+                return current; 
+            count = 0; 
+        }
+        return current ; 
+    }
 	
+	public int majorityElement(int[] nums) {
+		int count = 0,candidate = 0 ;
+        
+        for (int num : nums) {
+            if (count == 0) {
+                candidate = num;
+            }
+            count = (num == candidate) ? count+1: count-1; 
+        }
+        return candidate; 
+	}
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 }
