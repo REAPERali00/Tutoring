@@ -70,10 +70,10 @@ public class Questions {
 //			Given: String abc = "1 2 3"; what will print out from the following 
 			// statement?
 			String abc = "1 2 3";
-			System.out.println(abc + abc.length());
+			System.out.println(abc  + abc.length());
 //
 //			abc.length()
-//
+// 			1 2 3 5
 //			1 2 35
 //
 //			1 2 33
@@ -92,13 +92,14 @@ public class Questions {
 //					result = 5.0 - 2;
 //
 //					result = 5.0 % 2; 
+			
 			System.out.println(result);
 			break;
 		case 4:
 //			What is the output from the statement: 
 			System.out.println((double) (5 / 2));
 //
-//			3
+//			2.0
 //
 //			5 / 2
 //
@@ -128,7 +129,7 @@ public class Questions {
 //
 //					l_a_s_t_n_a_m_e
 //
-//					LasTNamE
+//					LastName
 //
 //					lastName
 //			Which of the following is a valid Java identifier (name) for a class, in other words which one of the 
@@ -142,28 +143,52 @@ public class Questions {
 //					42LifeTheUniverse
 //
 //					this
+			/*
+			 * What command will configure Git with an email address?
+			 * 
+			 * config --global git with your.name "your name"
+			 * 
+			 * git --global config email as "your@email.com"
+			 * 
+			 * git config --global user.name "your name"
+			 * 
+			 * git config --global user.email "your@email.com"
+			 */
+			
+			/*
+			 * Given the class declaration: public class Greeting, the compiled class
+			 * byte-code file produced by the compiler is __________.
+			 * 
+			 * greeting.java.class 
+			 * Greeting.java
+			 * Greeting.bytecode 
+			 * Greeting.class
+			 */
 			break;
 
 		case 7:
-//			Which line below specifies to the compiler a literal-value having data-type long?
-//
-//					3F
-//
-//					3L
-//
-//					3
-//
-//					3D
-			long something;
+			/*
+			 * Which line below specifies to the compiler a literal-value having data-type
+			 * long?
+			 * 
+			 * 3F
+			 * 
+			 * 3L
+			 * 
+			 * 3
+			 * 
+			 * 3D
+			 */
+			long something ;
 			break;
 		case 8:
 			// What will the following print?
 			int n = 1;
-			System.out.printf("%d, %d, %d, ", n, --n, n--); // 1 0 0 -1
-			// 1 0 1 ?
+			
+			System.out.printf("%d, %d, %d, %d, %d,", n, --n, n--, n++, ++n);  //1 0 0 -1 1 
 
-			System.out.println(++n);
-
+			System.out.println(n++); //1
+			
 			break;
 		case 9:
 //			Which line of code below correctly declares a variable that is a constant in Java programming?
@@ -175,10 +200,11 @@ public class Questions {
 //					final double SALES_TAX = 0.14;
 //
 //					static double SALES_TAX = 0.14;
+				
 			break;
 		case 10:
 			double number = 4.0;
-			if (number == 1.0)
+			if (number/4 == 1.0)
 				System.out.println(number);
 			else
 				System.out.println("well isn't this a surprise? " + number);
@@ -204,12 +230,11 @@ public class Questions {
 			 * what do each of these mean? 
 			 * Initializing 
 			 * Instance 
-			 * Declaration
+			 * Declaration  
 			 * Definition 
 			 * Attribute 
 			 * instance variables
-			 * identifiers
-			 * Literals 
+			 * Literals  
 			 */
 			
 			/*
@@ -218,19 +243,21 @@ public class Questions {
 			 * True False
 			 */
 			
-			/**
-			 * By using ____, you can use reasonable, easy-to-remember names for methods and
-			 * concentrate on their purpose rather than on memorizing different method
-			 * names.
-			 * 
-			 * the same argument names
-			 * 
-			 * the same parameter names
-			 * 
-			 * method overloading
-			 * 
-			 * method return types
-			 */
+			
+			break;
+		case 12: 
+//			Which one of the following variable declarations and initializations contains a syntax mistake?
+//
+//
+//					char number1 = 65;  
+//
+//					int number1 = 33.0;
+//
+//					int number1 = 'A';
+//
+//					double number1 = 15;
+			
+//			System.out.println(number1);
 			break;
 
 		default:
@@ -238,7 +265,7 @@ public class Questions {
 			break;
 		}
 		count++;
-		count %= 10;
+		count %= 12;
 		writeToFile();
 	}
 

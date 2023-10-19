@@ -11,8 +11,10 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-//		questionNum(0);
+		questionNum(12);
 		q.questions();
+		 Boolean b;
+		 boolean b1;
 		
 	}
 
