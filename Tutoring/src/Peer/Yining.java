@@ -3,6 +3,13 @@ package Peer;
 public class Yining {
 
 	/*
+	 * Variables : additions, modula, division: += ++ -- 
+	 * Classes: Methods (ex: print hello world, method that prints name , does addtion), getter and setter, 
+	 * Constructors
+	 * Conditional statements: booleans, <, > , <=, ==, !=, !, &&, || 
+	 * if else elseif, switch 
+	 * 
+	 * 
 	 * 
 	 */
 	public static void main(String[] args) {

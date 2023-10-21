@@ -8,9 +8,9 @@ public class Main {
 	
 	public static void main(String[] args) {
 		int nums[] = {1,1,1,2,2,3}; 
-		int k = solution.removeDuplicates2(nums);
+		solution.rotate(nums, 3);
 
-		System.out.printf("%d \n", k);
+//		System.out.printf("%d \n", k);
 		solution.printArr(nums);
 	}
 

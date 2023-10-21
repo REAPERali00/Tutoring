@@ -197,11 +197,10 @@ public class Interview {
         return candidate; 
 	}
 
-	
-
-	
-	
-	
+	public void rotate(int[] nums, int k) {
+		for (int i = 0; i < k; i++)
+			swap(nums, i, nums.length - k);
+	}	
 	
 	
 	
