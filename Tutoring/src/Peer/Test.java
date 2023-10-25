@@ -1,7 +1,7 @@
 package Peer;
 
 public class Test {
-	public  int n; //instance variable 
+	public int n; //instance variable 
 	private int id; 
 	
 	//Getter: returns the value
@@ -10,6 +10,10 @@ public class Test {
 	}
 	//Setter: changes the value, ie sets it
 	public void setId(int id) {
+		if(id < 0) {
+			System.out.println("It can't be zero!");
+			return; 
+		}
 		this.id = id;
 	}
 	

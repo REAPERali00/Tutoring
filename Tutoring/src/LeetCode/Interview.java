@@ -10,11 +10,11 @@ public class Interview {
 	}
 
 	public void swap(int[] arr, int element1, int element2) {
-        int temp = arr[element1];
-        arr[element1] = arr[element2];
-        arr[element2] = temp;
-    }
-	
+		int temp = arr[element1];
+		arr[element1] = arr[element2];
+		arr[element2] = temp;
+	}
+
 	public void merge1(int[] nums1, int m, int[] nums2, int n) {
 		if (nums2.length == 0)
 			return;
@@ -122,18 +122,18 @@ public class Interview {
 		Arrays.sort(nums, 0, nums.length - end);
 		return nums.length - i;
 	}
-	
+
 	int removeDuplicates(int[] nums) {
-        int j = 1;
-        for(int i = 1; i < nums.length; i++){
-            if(nums[i] != nums[i - 1]){
-                nums[j] = nums[i];
-                j++;
-            }
-        }
-        return j;
-    }
-	
+		int j = 1;
+		for(int i = 1; i < nums.length; i++){
+			if(nums[i] != nums[i - 1]){
+				nums[j] = nums[i];
+				j++;
+			}
+		}
+		return j;
+	}
+
 	/**
 	 * Given an integer array nums sorted in non-decreasing order, remove some
 	 * duplicates in-place such that each unique element appears at most twice. The
@@ -163,7 +163,7 @@ public class Interview {
 		}
 		return j;
 	}
-	
+
 	/*
 	 * Given an array nums of size n, return the majority element.
 	 * 
@@ -171,41 +171,117 @@ public class Interview {
 	 * may assume that the majority element always exists in the array.
 	 */
 	public int majorityElementFirstAttempt(int[] nums) {
-        int count = 0, current = nums[0]; 
-        for(int i = 0; i < nums.length; i++){
-            current = nums[i]; 
-            for(int j = 0; j < nums.length; j++){
-                if(nums[j] == nums[i])
-                    count++; 
-            }
-            if(count > nums.length/ 2)
-                return current; 
-            count = 0; 
-        }
-        return current ; 
-    }
-	
+		int count = 0, current = nums[0]; 
+		for(int i = 0; i < nums.length; i++){
+			current = nums[i]; 
+			for(int j = 0; j < nums.length; j++){
+				if(nums[j] == nums[i])
+					count++; 
+			}
+			if(count > nums.length/ 2)
+				return current; 
+			count = 0; 
+		}
+		return current ; 
+	}
+
 	public int majorityElement(int[] nums) {
 		int count = 0,candidate = 0 ;
-        
-        for (int num : nums) {
-            if (count == 0) {
-                candidate = num;
-            }
-            count = (num == candidate) ? count+1: count-1; 
-        }
-        return candidate; 
+
+		for (int num : nums) {
+			if (count == 0) {
+				candidate = num;
+			}
+			count = (num == candidate) ? count+1: count-1; 
+		}
+		return candidate; 
 	}
 
 	public void rotate(int[] nums, int k) {
 		for (int i = 0; i < k; i++)
 			swap(nums, i, nums.length - k);
 	}	
-	
-	
-	
-	
-	
-	
 
+	public int findSmallest(int[] arr){
+		int  minInd = 0; 
+		for(int i = 0; i < arr.length; i++) 
+			if(arr[i] < arr[minInd]) minInd = i; 
+		return minInd;
+	}
+
+	public int maxProfitMyFirstSolution(int[] prices) {
+		int minInd = findSmallest(prices), max = 0; 
+		for(int i = minInd+ 1; i < prices.length; i++)
+			if(prices[i] > max) max = prices[i];
+		if(minInd == prices.length-1) return 0;  
+		return max - prices[minInd]; 
+
+	}
+
+	public int maxProfit(int[] prices) {
+		int cheapest = prices[0], maxProfit = 0;
+		for (int i = 1; i < prices.length; i++) {
+			if (prices[i] < cheapest)
+				cheapest = prices[i];
+			else if ((prices[i] - cheapest) > maxProfit)
+				maxProfit = prices[i] - cheapest;
+		}
+		return maxProfit;
+	}
+
+	/*
+	 * You are given an integer array prices where prices[i] is the price of a given
+	 * stock on the ith day.
+	 * 
+	 * On each day, you may decide to buy and/or sell the stock. You can only hold
+	 * at most one share of the stock at any time. However, you can buy it then
+	 * immediately sell it on the same day.
+	 * 
+	 * Find and return the maximum profit you can achieve.
+	 */
+	public int maxProfit2(int[] prices) {
+		int cheapest = prices[0], maxProfit = 0;
+		for (int i = 1; i < prices.length; i++) {
+			if (prices[i] < cheapest)
+				cheapest = prices[i];
+			else if ((prices[i] - cheapest) > 0) {
+				maxProfit += prices[i] - cheapest;
+				cheapest = prices[i];
+			}
+		}
+		return maxProfit;
+	}
+
+	public boolean canJumpMySolution(int[] nums) {
+        int length = nums.length;
+        for(int i = 0; nums[i%length] != 0;){
+            i += nums[i]; 
+            if(i >= length-1) return true; 
+        }
+        if(length==1) return true;
+        return false;
+    }
+	
+    public boolean canJump(int[] nums) {
+        int max = 0; 
+        for(int i = 0; i< nums.length; i++){
+            if(i > max) return false; 
+            max = Math.max(max, i+nums[i]); 
+        }
+        return true;
+     }
+
+    public int jump2Solution(int[] nums) {
+		for(int i = 1; i < nums.length; i++) 
+			nums[i] = Math.max(nums[i] + i, nums[i-1]);
+		int count= 0; 
+		for(int i = 0; i < nums.length-1;){
+			count++; 
+			i = nums[i]; 
+		}
+		return count;  
+	}
+    
+    
+    
 }
