@@ -282,6 +282,58 @@ public class Interview {
 		return count;  
 	}
     
+    public int hIndex(int[] citations) {
+        Arrays.sort(citations);
+        int n = citations.length, res = 0;  
+        for(int i = 0; i < n - res; i++)
+            if(citations[i] != res)
+                res = Math.max(res, Math.min(citations[i], n-i));
+        return res;
+    }
+    
+    public int[] productExceptSelfMySolution(int[] nums) {
+        int length = nums.length;
+        int res[] = new int[length]; 
+        Arrays.fill(res, 1); 
+        for(int i =0 , j = 0; j < length;i++) {
+            if(i >= length){
+                i%= length; 
+                j++;
+            } 
+            if(i!= j)
+                res[i] *= nums[j];
+        }
+        return res; 
+    }
+    
+	public int[] productExceptSelf(int[] nums) {
+		int length = nums.length;
+		int[] res = new int[length];
+
+		// Initialize res with the product of all elements to the left of i
+		int leftProduct = 1;
+		for (int i = 0; i < length; i++) {
+			res[i] = leftProduct;
+			leftProduct *= nums[i];
+		}
+
+		// Initialize a variable to store the product of all elements to the right of i
+		int rightProduct = 1;
+
+		// Update res by multiplying it with the product of all elements to the right of
+		// i
+		for (int i = length - 1; i >= 0; i--) {
+			res[i] *= rightProduct;
+			rightProduct *= nums[i];
+		}
+
+		return res;
+	}
+    
+    
+    
+    
+    
     
     
 }

@@ -3,7 +3,6 @@ package Peer;
 public class Test {
 	public int n; //instance variable 
 	private int id; 
-	
 	//Getter: returns the value
 	public int getId() {
 		return id;
@@ -31,10 +30,6 @@ public class Test {
 	
 	//method 
 	public void author (String name) {
-		System.out.println("the author is " + name);
-	}
-	
-	public void printHello(String name) {
 		System.out.println("Hello " + name);
 	}
 	public int devide(int n, int m) {

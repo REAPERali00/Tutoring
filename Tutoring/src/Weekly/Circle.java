@@ -7,6 +7,7 @@ public class Circle {
 	//Instance variables: 
 	private int radius;
 	private String name;
+	
 	//Getters/Setter
 	public int getRadius() {
 		return radius;
@@ -18,7 +19,7 @@ public class Circle {
 	public String getName() {
 		return name;
 	}
-	
+
 	public void setName(String name) {
 		this.name = name;
 	}
