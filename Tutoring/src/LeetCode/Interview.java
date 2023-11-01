@@ -1,8 +1,10 @@
 package LeetCode;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Interview {
+
 	public void printArr(int[] arr) {
 		for (int i : arr)
 			System.out.print(i + ",");
@@ -253,25 +255,25 @@ public class Interview {
 	}
 
 	public boolean canJumpMySolution(int[] nums) {
-        int length = nums.length;
-        for(int i = 0; nums[i%length] != 0;){
-            i += nums[i]; 
-            if(i >= length-1) return true; 
-        }
-        if(length==1) return true;
-        return false;
-    }
-	
-    public boolean canJump(int[] nums) {
-        int max = 0; 
-        for(int i = 0; i< nums.length; i++){
-            if(i > max) return false; 
-            max = Math.max(max, i+nums[i]); 
-        }
-        return true;
-     }
+		int length = nums.length;
+		for(int i = 0; nums[i%length] != 0;){
+			i += nums[i]; 
+			if(i >= length-1) return true; 
+		}
+		if(length==1) return true;
+		return false;
+	}
 
-    public int jump2Solution(int[] nums) {
+	public boolean canJump(int[] nums) {
+		int max = 0; 
+		for(int i = 0; i< nums.length; i++){
+			if(i > max) return false; 
+			max = Math.max(max, i+nums[i]); 
+		}
+		return true;
+	}
+
+	public int jump2Solution(int[] nums) {
 		for(int i = 1; i < nums.length; i++) 
 			nums[i] = Math.max(nums[i] + i, nums[i-1]);
 		int count= 0; 
@@ -281,31 +283,31 @@ public class Interview {
 		}
 		return count;  
 	}
-    
-    public int hIndex(int[] citations) {
-        Arrays.sort(citations);
-        int n = citations.length, res = 0;  
-        for(int i = 0; i < n - res; i++)
-            if(citations[i] != res)
-                res = Math.max(res, Math.min(citations[i], n-i));
-        return res;
-    }
-    
-    public int[] productExceptSelfMySolution(int[] nums) {
-        int length = nums.length;
-        int res[] = new int[length]; 
-        Arrays.fill(res, 1); 
-        for(int i =0 , j = 0; j < length;i++) {
-            if(i >= length){
-                i%= length; 
-                j++;
-            } 
-            if(i!= j)
-                res[i] *= nums[j];
-        }
-        return res; 
-    }
-    
+
+	public int hIndex(int[] citations) {
+		Arrays.sort(citations);
+		int n = citations.length, res = 0;  
+		for(int i = 0; i < n - res; i++)
+			if(citations[i] != res)
+				res = Math.max(res, Math.min(citations[i], n-i));
+		return res;
+	}
+
+	public int[] productExceptSelfMySolution(int[] nums) {
+		int length = nums.length;
+		int res[] = new int[length]; 
+		Arrays.fill(res, 1); 
+		for(int i =0 , j = 0; j < length;i++) {
+			if(i >= length){
+				i%= length; 
+				j++;
+			} 
+			if(i!= j)
+				res[i] *= nums[j];
+		}
+		return res; 
+	}
+
 	public int[] productExceptSelf(int[] nums) {
 		int length = nums.length;
 		int[] res = new int[length];
@@ -329,11 +331,145 @@ public class Interview {
 
 		return res;
 	}
-    
-    
-    
-    
-    
-    
-    
+
+	public int canCompleteCircuitMySolution(int[] gas, int[] cost) {
+		int[] tanks = new int[gas.length]; 
+		int sum = 0; 
+		for(int i = 0; i < gas.length; i++){
+			tanks[i] = gas[i] - cost[i]; 
+			sum += tanks[i]; 
+		}
+
+		for(int i = 0; sum >= 0 && i < gas.length; i++){
+			if(tanks[i] >= 0 && tanks[i] + tanks[(i+1)%gas.length] >= 0){
+				return i; 
+			}
+		}
+		return -1;
+	}
+
+	public int canCompleteCircuit(int[] gas, int[] cost) {
+		int n = gas.length;
+		int total_surplus = 0;
+		int surplus = 0;
+		int start = 0;
+
+		for(int i = 0; i < n; i++){
+			total_surplus += gas[i] - cost[i];
+			surplus += gas[i] - cost[i];
+			if(surplus < 0){
+				surplus = 0;
+				start = i + 1;
+			}
+		}
+		return (total_surplus < 0) ? -1 : start;
+	}
+	
+	public int candyMySolution(int[] ratings) {
+		int n = ratings.length, total = n; 
+		for(int i =0; i < n; i++){
+			total += i > 0 && ratings[i] > ratings[i-1]? 1:0;
+			total += i < n-1 && ratings[i] > ratings[i+1]? 1:0;
+
+		}
+		return total; 
+	} 
+	public int candy(int[] ratings) {
+        int n = ratings.length, candy = n, i = 1; 
+        while(i < n){
+            if(ratings[i] == ratings[i-1]){
+                i++; 
+                continue; 
+            }
+            int peak = 0; 
+            while(ratings[i] > ratings[i-1]){
+                peak++; 
+                candy+= peak; 
+                i++; 
+                if(i==n) return candy; 
+            }
+            int valley = 0; 
+            while(i < n && ratings[i] < ratings[i-1]){
+                valley++; 
+                candy+= valley; 
+                i++; 
+            }
+            candy -= Math.min(peak, valley); 
+        }
+        return candy; 
+    }
+
+	public int trapMySolution(int[] height) {
+        int water = 0, wallInd = 0, second = 0; 
+        for(int i = 0; i < height.length; i++){
+            if(height[i] >= height[wallInd] && ++second==2){
+                for(int j = wallInd; j < i; j++) water+= height[wallInd] - height[j];
+                second = 0; 
+            } 
+            if(height[i] >= height[wallInd]) wallInd = i;
+           
+        }
+        return water;
+    }
+
+	public int trap(int[] height) {
+		int n = height.length, lmax = height[0], rmax = height[n - 1], water = 0;
+		for (int l = 1, r = n - 2; l <= r;) {
+			if (lmax <= height[l])
+				lmax = height[l++];
+			else if (rmax <= height[r])
+				rmax = height[r--];
+			else if (lmax <= rmax && height[l] < lmax)
+				water += lmax - height[l++];
+			else
+				water += rmax - height[r--];
+		}
+
+		return water;
+	}
+	
+	 public int convertRoman(char c){
+	        int n = 0; 
+	        switch(c){
+	            case 'I': 
+	                n = 1;
+	            break;
+	            case 'V': 
+	                n = 5;
+	            break;
+	            case 'X': 
+	                n = 10;
+	            break;
+	            case 'L': 
+	                n = 50;
+	            break;
+	            case 'C': 
+	                n = 100;
+	            break;
+	            case 'D': 
+	                n = 500;
+	            break;
+	            case 'M': 
+	                n = 1000;
+	            break;
+	        }
+	        return n;
+	    }
+	   
+	 public int romanToIntMySolution(String s) {
+		 int res = 0, first = 0, second = 0;
+		 for (int i = 0; i < s.length(); i++) {
+			 first = convertRoman(s.charAt(i));
+			 second = i < s.length() - 1 ? convertRoman(s.charAt(i + 1)) : first;
+			 res += first < second ? second - first * (++i / i) : first;
+		 }
+		 return res;
+	 }
+
+
+
+
+
+
 }
+

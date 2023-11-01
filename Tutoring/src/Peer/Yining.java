@@ -1,5 +1,7 @@
 package Peer;
 
+import java.util.Scanner;
+
 public class Yining {
 
 	/*
@@ -12,7 +14,7 @@ public class Yining {
 	 * 
 	 * 
 	 */
-	public static void main(String[] args) {
+	public static void firstSession() {
 		int n ; 
 		Test2 test = new Test2();
 		Test2 test2 = new Test2();
@@ -25,5 +27,22 @@ public class Yining {
 		}
 		System.out.println(test2.add(12));//syso + ctrl + space 
 	}
+	
+	public static void main(String[] args) {
+		Test test= new Test(1,2);
+		Scanner scan = new Scanner(System.in); 
+		double weight;
+//		System.out.println("Enter the weight");
+		int n = 1212312312;
+		int m = 1212312312;
+		System.out.println(n + m);
+		System.out.println(test.devide(1, 0));
+		n = 12;
+		weight = scan.nextDouble();
+	
+		
+		
+	}
+	
 
 }

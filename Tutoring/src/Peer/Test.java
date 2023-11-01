@@ -18,7 +18,7 @@ public class Test {
 	
 	//Default Constructor: 
 	public Test() {
-		this(0, -1);//calling the nondefault constructor. MUST BE ON THE FIRS LINE
+		this(0, 4);//calling the nondefault constructor. MUST BE ON THE FIRS LINE
 //		n = 0; 
 //		id = -1;
 	}
@@ -31,6 +31,10 @@ public class Test {
 	//method 
 	public void author (String name) {
 		System.out.println("Hello " + name);
+	}
+	
+	public void author() {
+		System.out.println("Hello Ali");
 	}
 	public int devide(int n, int m) {
 		return n/m;

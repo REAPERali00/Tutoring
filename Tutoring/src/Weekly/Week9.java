@@ -8,8 +8,9 @@ public class Week9 {
 	 * 1.Variable: primitive (value type) and reference  
 	 * 		primitve types: int, double, float, char 'a', 'A', '!' , boolean, short, long, byte
 	 * 2.Class: Instance variable, Constructors, getter setters, worker methods
-	 * 
-	 * 		 
+	 * 3.Conditional statements: if else, switch, && || 
+	 * 4.Loops: for, while, do while 
+	 * 5.Arrays 
 	 */
 	public static void saturday() {
 		String s = "hi how are you"; 
@@ -48,6 +49,7 @@ public class Week9 {
 		
 		System.out.println(student);
 	}
+	
 	public static void main(String[] args) {
 		studentExe();  
 	}
