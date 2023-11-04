@@ -26,10 +26,8 @@ static string menu_print[] = {
 };
 
 void start();
-void test();
 int menu();
 void menu_exe();
-
 void main_reg();
 void main_drop();
 void main_table();
@@ -42,7 +40,5 @@ static PTR_FUNC exe[] = {
 	main_table,
 	main_exit,
 };
-
-
 
 #endif // !MAIN_H_

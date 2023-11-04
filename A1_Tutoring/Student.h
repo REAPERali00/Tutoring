@@ -63,6 +63,6 @@ void print_registery(Stud_reg* std);
 void print_table(Stud_reg* std);
 void register_student(Stud_reg* std, int id, string course_id);
 void drop_student(Stud_reg* std, int drop_ind);
-
+void free_std(Stud_reg* std);
 #endif // !STUDENT_H_
 

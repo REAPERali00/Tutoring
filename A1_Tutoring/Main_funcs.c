@@ -1,11 +1,10 @@
 #include "Main_funcs.h"
-#include "Student.h"
 
 void start() {
 	create_default(&std);
 	menu_exe();
+	free(&std); 
 }
-
 int menu() {
 	int choice = 0; 
 	printf("Main Menu:\n"); 
@@ -24,7 +23,6 @@ void menu_exe() {
 	(*exe[choice])();
 	menu_exe();
 }
-
 void main_reg() {
 	register_student(&std, 12345, "cst8116");
 	register_student(&std, 11111, "cst8116");
@@ -35,8 +33,10 @@ void main_drop() {
 }
 void main_table() {
 	print_table(&std); 
+	//print_registery(&std);
 }
 void main_exit() {
+	free(&std); 
 	printf("Bye!\n"); 
 	exit(EXIT_SUCCESS); 
 }

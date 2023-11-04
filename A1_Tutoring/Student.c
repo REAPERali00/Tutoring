@@ -24,7 +24,7 @@ void create_default(Stud_reg* std) {
 	std->studentID = (int*) calloc(size.std_size, sizeof(int));
 	std->courses = (string*) calloc(size.crs_size, sizeof(string));
 	std->registration = (int*)calloc(size.std_size*size.crs_size, sizeof(int)); 
-	if (!std->studentID || !std->courses) {
+	if (!std->studentID || !std->courses || !std->registration) {
 		failed_mem();
 	}
 	create_student_id(std->studentID);
@@ -88,4 +88,9 @@ void drop_student(Stud_reg* std, int drop_ind) {
 	std->registration[drop_ind] = 0;
 	printf(msg[DROP_SUC]);
 }
-
+void free_std(Stud_reg* std) {
+	free(std->studentID);
+	free(std->courses);
+	free(std->registration); 
+	free(std);
+}
