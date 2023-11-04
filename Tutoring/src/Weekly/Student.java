@@ -1,7 +1,7 @@
 package Weekly;
 
 public class Student {
-	private int id;
+	public int id;
 	private String name;
 	private String password; 
  
@@ -28,5 +28,13 @@ public class Student {
 	public void setId(int id) {
 		System.out.println(id);
 		this.id = id;
+	}
+	
+	public void printName(String name, String msg) {
+		System.out.println(msg + " " + name);
+	}
+	
+	public int devision(int num1, int num2) {
+		return num1 / num2;
 	}
 }

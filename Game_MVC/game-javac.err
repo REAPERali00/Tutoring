@@ -1,0 +1,7 @@
+src\game\GameView.java:283: warning: [deprecation] hide() in JComponent has been deprecated
+			pad.hide();
+			   ^
+src\game\GameView.java:33: warning: [serial] serializable class GameView has no definition of serialVersionUID
+public class GameView extends JFrame{
+       ^
+2 warnings

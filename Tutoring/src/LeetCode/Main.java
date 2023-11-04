@@ -9,7 +9,9 @@ public class Main {
 
 	
 	public static void main(String[] args) {
-		String s = "MCMXCIV"; 
+		int n = 58;
+		String s = solution.intToRoman(n);
+		System.out.println(s);
 //		solution.romanToInt(s); 
 		
 	}
