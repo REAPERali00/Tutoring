@@ -509,8 +509,18 @@ public class Interview {
 
 		return sb.toString();
 	}
-
-
+	public int lengthOfLastWordSimple(String s) {
+		String[] arr = s.split(" "); 
+		return arr[arr.length-1].length();
+	}
+	public int lengthOfLastWord(String s) {
+		int length = 0, space = 0; 
+		for(int i = s.length()-1; i > -1 ; i--){
+			if(s.charAt(i) != ' ') length++; 
+			else if(length > 0)return length; 
+		}
+		return length;
+	}
 
 }
 

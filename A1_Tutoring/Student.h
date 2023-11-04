@@ -27,20 +27,30 @@ static struct Stud_size{
 enum Message {
 	ALOC_FAIL,
 	BOUND,
+	REG_SUC,
+	REG_FAIL,
+	DROP_SUC, 
+	DROP_FAIL,
 };
 static string msg[] = {
 	"allocation failed.\n",
 	"Index out of bounds\n",
+	"Student successfully registered!\n", 
+	"Failed to register the student\n",
+	"Drop course successful\n", 
+	"Drop course failed.\n",
 };
 
-#define TITLE_SIZE 5
+#define TITLE_SIZE 7
 #define WIDTH 20
 static string title[] = {
-"\t\t\t\tRegistration Table\n",
+"\t\t\t\t*Registration Table*\n\n",
 "Registration Index",
 "Student ID",
 "Course ID",
-"Registration Status\n"
+"Registration Status\n",
+"*************************************************",
+"*****************************************\n",
 };
  
 void failed_mem();
@@ -50,6 +60,9 @@ void create_default(Stud_reg* std);
 void set_registery(Stud_reg* std, int stdInd, int courseInd, int val); 
 void print_title();
 void print_registery(Stud_reg* std);
+void print_table(Stud_reg* std);
+void register_student(Stud_reg* std, int id, string course_id);
+void drop_student(Stud_reg* std, int drop_ind);
 
 #endif // !STUDENT_H_
 
