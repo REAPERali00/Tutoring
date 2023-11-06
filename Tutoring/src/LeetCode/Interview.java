@@ -1,7 +1,12 @@
 package LeetCode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Interview {
 
@@ -521,6 +526,60 @@ public class Interview {
 		}
 		return length;
 	}
+	public String longestCommonPrefix(String[] strs) {
+		Arrays.sort(strs);
+		String s1 = strs[0];
+		String s2 = strs[strs.length-1];
+		int idx = 0;
+		while(idx < s1.length() && idx < s2.length()){
+			if(s1.charAt(idx) == s2.charAt(idx)){
+				idx++;
+			} else {
+				break;
+			}
+		}
+		return s1.substring(0, idx);
+	}
+	
+	public String spinWords(String sentence) {
+		return Arrays.stream(sentence.split(" "))
+				.map(i -> i.length() > 4 ? new StringBuilder(i).reverse().toString() : i)
+				.collect(Collectors.joining(" "));
+	}
 
+	public String[] inArray(String[] array1, String[] array2) {
+		ArrayList<String> res = new ArrayList<>();
+
+		for (String s1 : array1) {
+			for (String s2 : array2) {
+				if (s2.contains(s1) && !res.contains(s1)) {
+					res.add(s1);
+				}
+			}
+		}
+
+		Collections.sort(res);
+
+		return res.toArray(new String[res.size()]);
+	}
+	
+	/*
+	 * Complete the solution so that it splits the string into pairs of two
+	 * characters. If the string contains an odd number of characters then it should
+	 * replace the missing second character of the final pair with an underscore
+	 * ('_').
+	 */
+	public String[] solution(String s) {
+        s = (s.length() % 2 == 0)?s:s+"_";
+        return s.split("(?<=\\G.{2})");
+    }
+	
+	/*
+	 * Write a function, which takes a non-negative integer (seconds) as input and
+	 * returns the time in a human-readable format (HH:MM:SS)
+	 */
+	public String makeReadable(int seconds) {
+		return String.format("%02d:%02d:%02d", seconds / 3600, (seconds / 60) % 60, seconds % 60);
+	}
 }
 
