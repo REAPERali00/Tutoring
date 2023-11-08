@@ -74,8 +74,31 @@ public class Yining {
 		System.out.println(printLetter("C"));
 	}
 	
+	public static void fourthSession() {
+//		Scanner scan = new Scanner(System.in);
+//		if(scan.next() == "ABC333")
+//			System.out.println("Yes");
+		int ticket = 10;
+		if(ticket > 0 && ticket < 100) {
+			/*
+			 * %d: int 
+			 * %s: String
+			 * %c: char 
+			 * %f: flaot and double 
+			 * 
+			 */
+			System.out.printf("please sit on the %s seat.\n", ticket%2 ==0? "right": "left");
+		}
+		int crs = 12;
+		System.out.printf("Course %s: %d", "number", crs);
+		/*
+		 * Leap year: if the year given is divisible by 4, its a leap year. however, if
+		 * the year is divisible by 100, it should also be divisible by 400.
+		 */
+	}
+	
 	public static void main(String[] args) {
-		thirdSession();
+		fourthSession();
 	}
 	
 
