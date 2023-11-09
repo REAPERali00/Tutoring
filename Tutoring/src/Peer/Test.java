@@ -28,7 +28,10 @@ public class Test {
 		this.id = id;
 	}
 	
-	//method 
+	/**
+	 * mehtod prints hello (name)
+	 * @param name name that user passes on to the method 
+	 */
 	public void author (String name) {
 		System.out.println("Hello " + name);
 	}
