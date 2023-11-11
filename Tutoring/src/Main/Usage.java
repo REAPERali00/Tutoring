@@ -18,11 +18,13 @@ import TicTacToe.TicGUI;
 import TicTacToe.TicTacToe;
 import Calculator.Calculator;
 import Exercise.Exercise;
+import Guess_number.Guess;
 
 public class Usage {
 	
 	private String[] options = {"Tic Tac To Game (CommandLine)", "Calculator", "Window", 
-			"Print X", "Tic Tac To (GUI)", "Exercise", "Exit"};
+			"Print X", "Tic Tac To (GUI)", "Exercise","Guessig game", "Exit"};
+
 	public Scanner scan = new Scanner(System.in);
 	
 	private Runnable[] exe = {
@@ -32,6 +34,7 @@ public class Usage {
 		()->printX(),
 		()->tic(1),
 		()->exercise(),
+		()->new Guess().start(),
 		()->System.exit(0),
 		()->System.out.println("Option to be implemented. ")
 	};

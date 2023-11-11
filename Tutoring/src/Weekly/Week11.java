@@ -53,9 +53,13 @@ public class Week11 {
 		System.out.println(new Maths().num + " " + math2.num2);
 	}
 
-
+	public static void saturday() {
+		//Find the related file under Weekly Guessig_Game.java
+		new Guessing_Game().start();
+	}
+	
 	public static void main(String[] args) {
-		friday();
+		saturday();
 	}
 
 }
