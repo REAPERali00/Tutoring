@@ -32,6 +32,7 @@ public class Guess {
 	}
 	public void start() {
 		while(!user_inquiry());
+		
 		//scan.close();
 	}
 }

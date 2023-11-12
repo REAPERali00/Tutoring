@@ -58,8 +58,12 @@ public class Week11 {
 		new Guessing_Game().start();
 	}
 	
+	public static void sunday() {
+		
+	}
+	
 	public static void main(String[] args) {
-		saturday();
+		sunday();
 	}
 
 }
