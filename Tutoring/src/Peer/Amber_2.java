@@ -57,6 +57,7 @@ public class Amber_2 {
 	
 	public void start() {
 		even_exe(); 
+		
 	}
 
 	/**
