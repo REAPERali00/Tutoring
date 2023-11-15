@@ -2,7 +2,7 @@ package Peer;
 
 import java.util.Scanner;
 
-public class Amber_2 {
+public class Amber_2 implements Starting{
 	
 	
 	public void loops_explanation() {

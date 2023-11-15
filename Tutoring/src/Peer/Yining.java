@@ -2,7 +2,7 @@ package Peer;
 
 import java.util.Scanner;
 
-public class Yining {
+public class Yining implements Starting{
 
 	/*
 	 * Variables : additions, modula, division: += ++ -- 
@@ -14,7 +14,7 @@ public class Yining {
 	 * 
 	 * 
 	 */
-	public static void firstSession() {
+	public  void firstSession() {
 		int n ; 
 		Test2 test = new Test2();
 		Test2 test2 = new Test2();
@@ -28,7 +28,7 @@ public class Yining {
 		System.out.println(test2.add(12));//syso + ctrl + space 
 	}
 	
-	public static void secondSession() {
+	public  void secondSession() {
 		Test test= new Test(1,2);
 		Scanner scan = new Scanner(System.in); 
 		double weight;
@@ -41,7 +41,7 @@ public class Yining {
 		weight = scan.nextDouble();
 	}
 	
-	public static String printLetter(String letter) {
+	public  String printLetter(String letter) {
 		String result = ""; 
 		switch(letter) {
 		case "A": 
@@ -62,7 +62,7 @@ public class Yining {
 		return result;
 	}
 	
-	public static void thirdSession(){
+	public  void thirdSession(){
 		char letter = 'B'; 
 		System.out.print("You got ");
 		if(letter == 'A' || letter < 'A')
@@ -74,7 +74,7 @@ public class Yining {
 		System.out.println(printLetter("C"));
 	}
 	
-	public static void fourthSession() {
+	public  void fourthSession() {
 //		Scanner scan = new Scanner(System.in);
 //		if(scan.next() == "ABC333")
 //			System.out.println("Yes");
@@ -97,8 +97,76 @@ public class Yining {
 		 */
 	}
 	
-	public static void main(String[] args) {
-		fourthSession();
+	/**
+	 * Reverses an integer
+	 * @param num the passed on integer (Positive numbers only)
+	 * @return returns the reversed number
+	 */
+	public int reverse_int(int num) {
+		//Declarations: 
+		int rev = 0, digit = 0; 
+		while(num!=0) { //Loop until number becomes zero or less
+			digit = num % 10; //get the last digit from num
+			num /= 10; //remove the last digit form num
+			rev = rev*10 + digit; //update the reversed number
+		}
+		return rev; //return the results
+	}
+	
+	/**
+	 * Checks if a number is plaindrome or not
+	 * Method is dependant on reverse_int()
+	 * @param num the number to check for palindrome (no negatives)
+	 * @return returns true if it is palindrome and false otherwise
+	 */
+	public boolean is_palindrome(int num) {
+		//First way: 
+//		if(num == reverse_int(num)) {
+//			return true;
+//		}
+//		return false;
+		return num == reverse_int(num); //check if the number is the same as its reverse.
+	}
+	
+	/**
+	 * Checks if a number is dig_num digits. 
+	 * ex: (num, 5) checks if num is 5 digits 
+	 * @param num the number to check digits for (no negatives)
+	 * @param dig_num the total digit number (no 0 || negatives)
+	 * @return returns true if the num has more then dig_num digits
+	 */
+	public boolean is_n_digits(int num, int dig_num) {
+		return (num / (int)Math.pow(10,dig_num-1)) > 0; 
+	}
+	
+	/**
+	 * Starts the exe of the palindrome program 
+	 */
+	public void palindrome_main() {
+		Scanner scan = new Scanner(System.in);
+		int num = 0; 
+		do {
+			System.out.print("Enter the number (5 digit number): ");
+			num = scan.nextInt();
+			if(!is_n_digits(num,5)) {
+				System.out.println("Please enter a 5 digit number...");
+			}
+		}while(!is_n_digits(num,5)); 
+		
+		if(is_palindrome(num)) {
+			System.out.println("is palindrome");
+		}else {
+			System.out.println("is not palindrome");
+		}
+	
+		System.out.println("the number is " + (is_palindrome(num) ?"":"not ")+ "Palindrome");
+	}
+	
+	/**
+	 * Starts the class execution
+	 */
+	public void start() {
+		palindrome_main();
 	}
 	
 

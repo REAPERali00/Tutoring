@@ -27,6 +27,24 @@ public class Loops {
 		return 0;
 	}
 
+	/** Reverses an integer
+	 * ex: num 123 returns 321
+	 * @param num the passed on integer (Positive numbers only)
+	 * @return returns the reversed number
+	 */
+	public int reverse_int(int num) {
+		//TODO: Declarations: 
+		
+		 //TODO:Loop until number becomes zero or less
+		{
+			//TODO:get the last digit from num
+			//TODO:remove the last digit form num
+			//TODO:update the reversed number
+		}
+		//TODO:return the results
+		return -1;
+	}
+	
 	public static void printFibunachi(int n) {
 		int prev = 1, current = 0; // save the prev and current number
 		for (int i = 0; i < n; i++) {

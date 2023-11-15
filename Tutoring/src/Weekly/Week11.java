@@ -63,7 +63,7 @@ public class Week11 {
 	}
 	
 	public static void main(String[] args) {
-		sunday();
+		saturday();
 	}
 
 }
