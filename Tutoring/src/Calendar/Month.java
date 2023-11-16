@@ -1,7 +1,6 @@
 package Calendar;
 
 public class Month {
-	private int year;
 	private String name; 
 	private int tot_dates;
 	private int start_date; 
@@ -11,7 +10,6 @@ public class Month {
 		this.name = name; 
 		this.tot_dates = tot_dates; 
 		dates = new Date[tot_dates]; 
-		year = 2023; 
 		this.start_date = start_date; 
 		set_dates();
 	}
@@ -37,7 +35,6 @@ public class Month {
 		String res ="";
 		int weekly = 1; 
 		
-		res += String.format("%s %d\n", name, year);
 		for(String s: day_names)
 			res += String.format("%-" +(width-1) +"s ", s);
 		res+= "\n";
@@ -65,6 +62,8 @@ public class Month {
 		}
 		return res;
 	}
-	
+	public String get_name() {
+		return name;
+	}
 	
 }
