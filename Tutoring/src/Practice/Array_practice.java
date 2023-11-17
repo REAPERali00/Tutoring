@@ -6,50 +6,31 @@ import java.util.Arrays;
 
 public class Array_practice {
 	
-	private ArrayList<String> gameChoices = new ArrayList<>(Arrays.asList("Paper", "Rock", "Scissor"));
-	
+	//print an array of integers 
 	public void printArr(int[] arr) {
-		for(int i : arr)
-			System.out.println(i);
+		{ //TODO: Loop through the array 
+			//Print the array elements using a printf 
+		}
 	}
 	
-	public void reverse(int[] arr) {
-		
-		int[]reverse = new int[arr.length];
-		for(int i = arr.length -1, j = 0; i >=0 ; i--, j++) {
-			reverse[j] = arr[i];
-		}
-		printArr(reverse);
-	}
 	/**
-	 * Write a Java program to simulate a game of Rock, Paper, Scissors against the
-	 * computer. The program should prompt the user to enter their choice (Rock,
-	 * Paper, or Scissors), generate a random choice for the computer, and determine
-	 * the winner based on the following rules:
-	 * 
-	 * Rock beats Scissors. Scissors beats Paper. Paper beats Rock.
+	 * Write a program that checks if a string is a palindrome or not ex: racecar
+	 * resversed is racecar, so its palindrome. 
+	 * CHALLENGE: can you do it if its a sentence with spaces invloved? 
+	 * ex: Input: s = "A man, a plan, a canal: Panama" 
+	 * Output: true 
+	 * Explanation: "amanaplanacanalpanama" is a palindrome.
+	 * @param arr
 	 */
-	public void RockPaperScissor(String played) {
-		if(!gameChoices.contains(played)) {
-			System.out.println("Choice is not valid");
-			return;
+	public void palindrome(String pal_check) {
+		 //TODO: create a lenght var to save the lenght of the string
+		 {//TODO: loop through the string, what should the condition be? 
+			//TODO: check if the last element is not the same as the current one. 
+			//Basically the Idea is that we will move from the right and left hand side towards the middle and compare.
+			//TODO: return false if the elements are not the same. 
 		}
-		System.out.println("Users Choice: " + played);
+		//TODO: return true, as we have checked all the elements and made sure they are the same. 
 		
-		int cpIndex = (int) (Math.random() * 3);
-		String computerPlay = gameChoices.get(cpIndex);
-		System.out.println("Computers Choice: " + computerPlay);
-		
-		int result = cpIndex - gameChoices.indexOf(played);
-		
-		if(result == -1 || (result == 2)) {
-			System.out.println("Winner: Computer");
-		}
-		else if(result == 0) {
-			System.out.println("Winner: Tie");
-		}
-		else
-			System.out.println("Winer: User");
 	}
-
+	
 }

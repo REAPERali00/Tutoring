@@ -20,13 +20,6 @@ public class Month {
 		}
 	}
 	
-	public int get_dig_num(int num) {
-		for(int i = 1; i < 3; i++) {
-			if(num / (int)Math.pow(10, i) == 0)
-				return i;
-		}
-		return 0;
-	}
 
 	@Override
 	public String toString() {
@@ -51,7 +44,10 @@ public class Month {
 			System.out.println("Invalid Date, cannont set reminder.");; 
 			return;
 		}
-		dates[date-1].setReminder(msg); 
+		if(!dates[date-1].setReminder(msg)) {
+			System.out.println("Error, there was already a reminder set for this date");
+		}
+		
 	}
 	
 	public String get_reminder() {

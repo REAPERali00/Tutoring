@@ -20,7 +20,7 @@ public class Loops {
 	 * @param n last number to sum till
 	 * @return total sum
 	 */
-	public static int evenNumSum(int n) {
+	public int evenNumSum(int n) {
 		// TODO write a for loop (what should the condition be ?)
 		// TODO how to add up the even numbers? (hint: there are two ways)
 
@@ -45,13 +45,36 @@ public class Loops {
 		return -1;
 	}
 	
-	public static void printFibunachi(int n) {
-		int prev = 1, current = 0; // save the prev and current number
-		for (int i = 0; i < n; i++) {
-			current += prev; // Update the current number to the next value in fibunachi
-			prev = current - prev; // update the prev value to the value of current before the change
-			System.out.printf("%d  ", current); // Print the new number
+	/**
+	 * write a function that prints Fibunachi series till n. 
+	 * ex: n = 6 => 1  1  2  3  5  8 
+	 * @param n
+	 */
+	public void printFibunachi(int n) {
+		// save the prev and current number
+		{ // Loop n times 
+			// Update the current number to the next value in fibunachi
+			// update the prev value to the value of current before the change
+			// Print the new number
 		}
-		System.out.println(); // Go to next line
 	}
+	
+	/**
+	 * Write a mehtod that takes an integer and returns the 
+	 * reversed version of the Integer
+	 * ex: 123 return 321 
+	 * 
+	 * @param n
+	 * @return 
+	 */
+	public int reverseInt(int n) {
+		 //Create an integer to save the results
+		 { // create a loop ( hint: what should the condition be? its has smt to do with 0
+			 // Update the reversed number 
+			 //Update n. 
+		}
+		return -1;// Return the results. 
+	}
+	
+	
 }
