@@ -15,7 +15,7 @@
 - Find the files under week(number).java, and under method name the Daily Material we went through. ex: week1.java, Friday()
 
 ## Practice Files
-- ### Note that the files are still in the working and not yet completed
+### Note that the files are still in the working and not yet completed
 - [Conditional Statements](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Practice/Conditional_statments.java)
 - [Loops](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Practice/Loops.java)
 - [Arrays](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Practice/Array_practice.java)
