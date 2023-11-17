@@ -22,7 +22,7 @@
 
 ## Group Tutoring Projets
 - [Guessing game](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Weekly/Guessing_Game.java)
-- [Rock Paper Sacissors](#Group-Tutoring-Projets)
+- [Rock Paper Sacissors]([#Group-Tutoring-Projets](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Weekly/RPS.java))
 - [Exercise](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Exercise/Exercise.java)
 - [Tic Tac To_ command line](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/TicTacToe/TicTacToe.java)
 - [Calendar](https://github.com/REAPERali00/Tutoring/tree/main/Tutoring/src/Calendar)
