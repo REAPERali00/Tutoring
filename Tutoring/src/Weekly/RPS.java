@@ -2,45 +2,84 @@ package Weekly;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
 
-public class RPS {
-
-	//Creating an array of the game options, rock paper and scissor. 
-	private ArrayList<String> gameChoices = new ArrayList<>(Arrays.asList("Paper", "Rock", "Scissor"));
-
+class RPS{
+	
+	int player_move;
+	int computer_move; 
+	String[] rps= {"paper", "rock", "scissor"}; 
+	
 	/**
-	 * Write a Java program to simulate a game of Rock, Paper, Scissors against the
-	 * computer. The program should prompt the user to enter their choice (Rock,
-	 * Paper, or Scissors), generate a random choice for the computer, and determine
-	 * the winner based on the following rules:
-	 * 
-	 * Rock beats Scissors. Scissors beats Paper. Paper beats Rock.
+	 * Compares the moves, and returns 1 if the player won, 
+	 * else if the computer won return -1, if it was a tie return 0.  
+	 * @param player_move
+	 * @return 1: player wins, 0: tie, -1: computer wins
 	 */
-	public boolean rockPaperScissor(String played) {
-		//Checking if the player move is valid. (ie. its either rock, paper or scissor)
-		if (!gameChoices.contains(played)) {
-			System.out.println("Choice is not valid");
-			return false; // print error message if the move is not valid and exit the function
-		}
-		
-		System.out.println("Users Choice: " + played); // Display the users choice 
-		//Generate a random computer move by creating an index btw 0 till 2
-		int cpIndex = (int) (Math.random() * 3);
-		String computerPlay = gameChoices.get(cpIndex);
-		System.out.println("Computers Choice: " + computerPlay); //Display computer move
+	public int winner() {
+		//Get the player move, and the computer move and calculate the difference
+		int diff = player_move - computer_move;
+		if(diff == -1 || diff == 2) // if the diff is -1 or 2, the player wins
+			return 1; 
+		else if(diff == 0) //if the diff is 0, it means both are the same so its a tie
+			return 0;
+		return -1;// if the player didn't win, and its not a tie, it must be the computers win.
+	}
+	
+	public int generate_computer_ind() {
+		return new Random().nextInt(rps.length);
+	}
+	
+	public int get_playerMove() {
+		Scanner scan = new Scanner(System.in);
+		int move = 0;
+	
+		do {
+			System.out.print("Please enter your move:\n"
+					+ "1.paper\n"
+					+ "2.rock\n"
+					+ "3.scissor\n");
 			
-		//Get the difference between computer's move and the players 
-		int result = cpIndex - gameChoices.indexOf(played);
-		
-		//Check the win condition: if the difference was -1 || 2 the computer won, 
-		//if the same its  a tie and else the player won! 
-		if (result == -1 || (result == 2)) {
-			System.out.println("Winner: Computer");
-		} else if (result == 0) {
-			System.out.println("Winner: Tie");
-		} else
-			System.out.println("Winer: User");
-		
-		return true; // return true as the operation was successful. 
+			if(!scan.hasNextInt()) {
+				System.out.println("Error, type mismatch");
+				scan.next();
+				continue;
+			}
+			move = scan.nextInt(); 
+		}while(move < 1 || move > 3); 
+		return move;
+	}
+	
+	public void update_moves() {
+		player_move = get_playerMove()-1;
+		computer_move = generate_computer_ind();
+	}
+	
+	public void display_choices() {
+		System.out.printf("Players: %s\nComputer: %s\n", rps[player_move], rps[computer_move]);
+	}
+	
+	public void display_winner(int winner) {
+		switch(winner) {
+		case 1: 
+			System.out.println("The player won!");
+			break; 
+		case 0:
+			System.out.println("Its a tie!");
+			break;
+		case -1:
+			System.out.println("The computer won!");
+			break;
+		}
+	}
+	/**
+	 * Starts the game, 
+	 * @param player_move
+	 */
+	public void start() {
+		update_moves();
+		display_choices();
+		display_winner(winner());
 	}
 }
