@@ -7,10 +7,11 @@ public class Loops {
 	 * 
 	 * @param n its the number that the user passes to add up till
 	 */
-	public void add_nums(int n) {
+	public int add_nums(int n) {
 		// TODO write a for loop (what should the condition be? until when should we
 		// loop?)
 		// TODO what should you do in the for loop? how to keep tag on the total sum?
+		return -1;
 	}
 
 	/**
