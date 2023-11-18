@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>170</y>
+      <w>160</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>StudentView
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>160</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>App 
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>200</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>70</x>
+      <y>100</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Views
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
