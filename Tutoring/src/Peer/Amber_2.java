@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Amber_2 implements Starting{
 	
+	public void start() {
+		array_intro(); 
+		
+	}
 	
 	public void loops_explanation() {
 		/*
@@ -55,10 +59,7 @@ public class Amber_2 implements Starting{
 		System.out.println(even_sum(7));
 	}
 	
-	public void start() {
-		even_exe(); 
-		
-	}
+	
 
 	/**
 	 * Write a Java program to determine whether a given year is a leap year or not.
@@ -137,6 +138,47 @@ public class Amber_2 implements Starting{
 		return sum;
 	}
 
+	public void printArr(int[] arr) {
+		for(int i = 0; i < arr.length ; i++) {
+			if(i % 9 == 0 && i!=0) {
+				System.out.println();
+			}
+			System.out.printf("%d\t", arr[i]);
+		}
+	}
+	
+	/**
+	 * Modify the string so that Every second letter is capital.
+	 * other letters must be small cap. 
+	 * @param str
+	 */
+	public void capString(String str) {
+		int length = str.length(), toCap = 32;
+		char c;
+		for(int i = 0; i < length; i++) {
+			c = str.charAt(i);
+			
+			if(i % 2 != 0) {
+				if(c >= 'a' && c <= 'z')
+					c -= toCap;
+			}else {
+				if(c >= 'A' && c <= 'Z')
+					c += toCap;
+			}
+			System.out.print(c);
+		}
+	}
+	
+	public void array_intro() {
+		int num = 10;
+		int arr_num [] = new int[10];
+		String arr_name[] = {"Ali", "Amber"};
+		
+		for(int i = 0;i < arr_num.length; i++) {
+			arr_num[i] = i + 1;
+		}
+		capString("S1omething");
+	}
 }
 
 

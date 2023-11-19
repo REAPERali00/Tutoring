@@ -55,6 +55,7 @@ public class Calendar {
 		set_selected_month(month);
 		add_reminder(22, "Read a book");
 		add_reminder(1, "Mark this day");
+		add_reminder(3, "Study for the final exam!");
 		print_month();
 		set_selected_month(month-1);
 		add_reminder(5, "Different Month");

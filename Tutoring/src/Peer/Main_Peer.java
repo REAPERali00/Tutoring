@@ -20,7 +20,7 @@ public class Main_Peer {
 	}
 	
 	public static void main(String[] args) {
-		getInstace("Ayomide").start();
+		getInstace("Amber").start();
 	}
 
 }
