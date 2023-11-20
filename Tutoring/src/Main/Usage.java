@@ -17,13 +17,14 @@ import javax.swing.JTextField;
 import TicTacToe.TicGUI;
 import TicTacToe.TicTacToe;
 import Calculator.Calculator;
+import Calendar.Calendar;
 import Exercise.Exercise;
 import Guess_number.Guess;
-
+import Weekly.RPS;
 public class Usage {
 	
 	private String[] options = {"Tic Tac To Game (CommandLine)", "Calculator", "Window", 
-			"Print X", "Tic Tac To (GUI)", "Exercise","Guessig game", "Exit"};
+			"Print X", "Tic Tac To (GUI)", "Exercise","Guessig game","rock_paper_scissor","Calendar", "Exit"};
 
 	public Scanner scan = new Scanner(System.in);
 	
@@ -35,6 +36,8 @@ public class Usage {
 		()->tic(1),
 		()->exercise(),
 		()->new Guess().start(),
+		()->new RPS().game(),
+		()->new Calendar(2023).inject(1),
 		()->System.exit(0),
 		()->System.out.println("Option to be implemented. ")
 	};

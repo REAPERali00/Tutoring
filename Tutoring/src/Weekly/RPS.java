@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-class RPS{
+public class RPS{
 	
 	int player_move;
 	int computer_move; 
@@ -72,6 +72,9 @@ class RPS{
 			System.out.println("The computer won!");
 			break;
 		}
+	}
+	public void game() {
+		while(true)start();
 	}
 	/**
 	 * Starts the game, 
