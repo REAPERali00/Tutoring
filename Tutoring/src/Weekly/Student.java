@@ -14,7 +14,7 @@ public class Student {
 		this.password = password; 
 	}
 	public String getPass() {
-		return password;
+		return "You cant' get the password!";
 	}
 	public void setPass(String pass) {
 		password = pass + "Security";
