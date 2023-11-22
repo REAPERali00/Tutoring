@@ -14,6 +14,7 @@ public class Main_Peer {
 		factoryMap.put("Nat", Nat::new);
 		factoryMap.put("Zarko", Zarko::new);
 		factoryMap.put("Naima", Naima::new);
+		factoryMap.put("Connor_3", Connor_3::new);
 	}
 	
 	private static final Map<String,Starting> instanceMap = new HashMap<>();
@@ -23,7 +24,7 @@ public class Main_Peer {
 	}
 	
 	public static void main(String[] args) {
-		getInstace("Naima").start();
+		getInstace("Connor_3").start();
 	}
 
 }
