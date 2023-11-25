@@ -43,7 +43,7 @@ public class Connor_3 implements Starting {
 		ArrayList<Iface> arr2 = new ArrayList<>(Arrays.asList(arr));
 		arr2.add(new Sample2()); 
 		for(Iface element: arr2)System.out.println(element); 
-	
+		
 	}
 
 }

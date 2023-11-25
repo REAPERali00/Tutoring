@@ -25,4 +25,17 @@ public class Conditional_statments {
 		// instead of positive ones?
 	}
 
+	/*
+	 * write a method that checks if a character is a digit, or letter, or something else. 
+	 * if its a letter return 0, 
+	 * if its a digit return 1, 
+	 * if its neither, return -1. 
+	 */
+	public int is_number(char c) {
+		//TODO: check if the character is between '0' and '9' : 
+		
+		//TODO: check if the character is between 'a' and 'z' , or between 'A' and 'Z' 
+		
+		return  -1; //TODO: return the resutls of the check
+	}
 }
