@@ -34,5 +34,5 @@ This repository contains the Tutoring files and related projects.
 - [Exercise](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Exercise/Exercise.java)
 - [Tic Tac To\_ command line](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/TicTacToe/TicTacToe.java)
 - [Calendar](https://github.com/REAPERali00/Tutoring/tree/main/Calendar/src/Calendar)
-- [Hang Man Game](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/HangMan/HangMan.javahttps://github.com/REAPERali00/Tutoring/blob/main/Hangman/src/HangMan.java)
+- [Hang Man Game](https://github.com/REAPERali00/Tutoring/blob/main/Hangman/src/HangMan.java)
 - [Calculator](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Calculator/Calculator.java)
