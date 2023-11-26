@@ -13,6 +13,20 @@ public class Array_practice {
 		}
 	}
 	
+	/*
+	 * Create an array with n elements, where each element is an odd number. 
+	 * ex: if n = 5, then arr = {1,3,5,7,9}
+	 */
+	
+	public int[] create_odd_arr(int num) {
+		//TODO create the array of integers with the length of num
+		{ //TODO loop from 0 to the last element in the array. 
+			//TODO calculate the current odd number and give it to 
+			// HINT: if 2 * i can give the even numbers, how can I get odd numbers? 
+		}
+		return null; //TODO return the array. 
+	}
+	
 	/**
 	 * Write a program that checks if a string is a palindrome or not ex: racecar
 	 * resversed is racecar, so its palindrome. 
