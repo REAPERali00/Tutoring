@@ -24,7 +24,7 @@ public class Main_Peer {
 	}
 	
 	public static void main(String[] args) {
-		getInstace("Naima").start();
+		getInstace("Nat").start();
 	}
 
 }

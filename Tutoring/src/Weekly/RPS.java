@@ -31,25 +31,27 @@ public class RPS{
 		return new Random().nextInt(rps.length);
 	}
 	
+	private static final Scanner scanner = new Scanner(System.in);
+
 	public int get_playerMove() {
-		Scanner scan = new Scanner(System.in);
-		int move = 0;
-	
-		do {
-			System.out.print("Please enter your move:\n"
-					+ "1.paper\n"
-					+ "2.rock\n"
-					+ "3.scissor\n");
-			
-			if(!scan.hasNextInt()) {
-				System.out.println("Error, type mismatch");
-				scan.next();
-				continue;
-			}
-			move = scan.nextInt(); 
-		}while(move < 1 || move > 3); 
-		return move;
+	    System.out.print("Please enter your move:\n"
+	                     + "1. paper\n"
+	                     + "2. rock\n"
+	                     + "3. scissor\n");
+	    while (true) {
+	        if (!scanner.hasNextInt()) {
+	            System.out.println("Try again. Enter 1, 2, or 3:");
+	            scanner.next(); // clear the invalid input
+	            continue;
+	        }
+	        int move = scanner.nextInt();
+	        if (move >= 1 && move <= 3) {
+	            return move;
+	        }
+	        System.out.println("Invalid choice. Enter 1, 2, or 3:");
+	    }
 	}
+
 	
 	public void update_moves() {
 		player_move = get_playerMove()-1;

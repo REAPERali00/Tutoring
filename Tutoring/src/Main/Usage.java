@@ -20,11 +20,12 @@ import Calculator.Calculator;
 import Calendar.Calendar;
 import Exercise.Exercise;
 import Guess_number.Guess;
+import HangMan.HangMan;
 import Weekly.RPS;
 public class Usage {
 	
 	private String[] options = {"Tic Tac To Game (CommandLine)", "Calculator", "Window", 
-			"Print X", "Tic Tac To (GUI)", "Exercise","Guessig game","rock_paper_scissor","Calendar", "Exit"};
+			"Print X", "Tic Tac To (GUI)", "Exercise","Guessig game","rock_paper_scissor","Calendar","Hang Man", "Exit"};
 
 	public Scanner scan = new Scanner(System.in);
 	
@@ -38,6 +39,7 @@ public class Usage {
 		()->new Guess().start(),
 		()->new RPS().game(),
 		()->new Calendar(2023).inject(1),
+		()-> new HangMan().start(),
 		()->System.exit(0),
 		()->System.out.println("Option to be implemented. ")
 	};

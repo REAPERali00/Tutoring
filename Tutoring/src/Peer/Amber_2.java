@@ -179,6 +179,7 @@ public class Amber_2 implements Starting{
 		}
 		capString("S1omething");
 	}
+	
 }
 
 

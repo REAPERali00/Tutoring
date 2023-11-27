@@ -31,8 +31,16 @@ public class Week13 {
 		}
 	}
 	
+	public static void sunday() {
+		int arr[] = {1,2,3, 4, 5};
+		new Arrays_13().rereverse_arr_int(arr);
+		for(int i : arr)
+			System.out.printf("%d \t",i);
+		
+	}
+	
 	public static void main(String[] args) {
-		saturday();
+		sunday();
 	}
 
 }
@@ -55,6 +63,30 @@ class Arrays_13{
 		for(int i = 0; i < arr.length ; i++) {
 			arr[i] = i*2 + 1;
 			System.out.printf("%d %s", arr[i], i == arr.length-1? "\n": "");
+		}
+	}
+	
+	/*
+	 * get the number, and calculate the reverse of that num. 
+	 * ex: 123, returns 321. 
+	 */
+	public int reverse_int(int num) {//lets say starting num = 123
+		int rev = 0; 
+		while(num != 0) {
+			rev = num % 10 + rev * 10; //reverse = 321
+			num /= 10; //num = num / 10; //num = 0 
+		}
+		return rev; 
+	}
+	/*
+	 * this time we are receiving  an array. 
+	 * ex: arr = {1,2,3}. arr = {3,2,1}; 
+	 */
+	public void rereverse_arr_int(int[] arr) {
+		for(int i = 0; i < arr.length/2 ; i++) {
+			int temp = arr[i]; 
+			arr[i] = arr[arr.length - i-1]; 
+			arr[arr.length - i - 1] = temp; 
 		}
 	}
 	
