@@ -69,9 +69,52 @@ public class Ayomide implements Starting {
 		System.out.printf("%s EU size: %d\n", gender, eu); 
 	}
 	
+
+	public void do_while_example() {
+		String number = " ";
+		Scanner scan = new Scanner(System.in);
+		do {
+			System.out.print("Enter 1 to exit: ");
+			number = scan.next();
+		}while(!number.equals("1"));
+	}
+	
+	/*
+	 * reverse the integer array, 
+	 * ex: arr: 1,2,3,4
+	 * make it arr: 4,3,2,1
+	 */
+	public void reverse_array(int arr[]) {
+		int length = arr.length;
+		for(int i = 0; i <  length/2; i++) {
+			int temp = arr[i]; 
+			arr[i] = arr[length-1-i]; 
+			arr[length-1-i] = temp; 
+		}
+	}
+	
+	public void array() {
+		int arr [] = new int[700];
+		arr[0] = 12;// the first element is always 0
+		arr[arr.length-1] = -12; //the last element is always length-1.
+		
+		//Now we want to use loops, to change the elements. 
+		//arr = 1,2,3,4,5,....
+		for(int i = 0; i < arr.length; i++) {
+//			arr[i] = i * 2 + 1;
+			arr[i] = i+1;
+		}
+		
+		String names[] = {"Name 1", "John", "Smith", "New name"}; 
+		for(int i = 0; i < names.length; i++) {
+			System.out.printf("%s, ", names[i]);
+		}
+		reverse_array(arr);
+	}
+	
 	@Override
 	public void start() {
-		sat_session();
+		array();
 	}
 
 }

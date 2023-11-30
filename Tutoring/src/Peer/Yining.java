@@ -162,11 +162,12 @@ public class Yining implements Starting{
 		System.out.println("the number is " + (is_palindrome(num) ?"":"not ")+ "Palindrome");
 	}
 	
+	
 	/**
 	 * Starts the class execution
 	 */
 	public void start() {
-		palindrome_main();
+		
 	}
 	
 
