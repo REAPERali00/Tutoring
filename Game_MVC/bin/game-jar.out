@@ -1,9 +1,0 @@
-added manifest
-adding: game/(in = 0) (out= 0)(stored 0%)
-adding: game/Game.class(in = 443) (out= 306)(deflated 30%)
-adding: game/GameController$Listener.class(in = 1998) (out= 1130)(deflated 43%)
-adding: game/GameController.class(in = 942) (out= 555)(deflated 41%)
-adding: game/GameModel.class(in = 1122) (out= 609)(deflated 45%)
-adding: game/GameView.class(in = 7236) (out= 3941)(deflated 45%)
-adding: game-jar.err(in = 0) (out= 0)(stored 0%)
-adding: game-jar.out(in = 452) (out= 181)(deflated 59%)
