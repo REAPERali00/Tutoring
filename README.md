@@ -32,6 +32,7 @@ This repository contains the Tutoring files and related projects.
 - [Arrays](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Practice/Array_practice.java)
 
 ## Tutorials
+- [Project Set up](./Tutoring/src/Tutorial/ProjectSetup.md)
 - [Variables](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Tutorial/Variables.java)
 
 ## Group Tutoring Projets

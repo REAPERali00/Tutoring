@@ -27,8 +27,12 @@ public class Week2 {
         System.out.println(s);
     }
 
+    public static void saturday() {
+        System.out.println("hello");
+    }
+
     public static void main(String[] args) {
-        friday();
+        saturday();
     }
 
 }
