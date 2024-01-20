@@ -10,6 +10,7 @@ This repository contains the Tutoring files and related projects.
   - [Group Tutoring](#group-tutoring)
   - [Practice Files](#practice-files)
     - [`Note that the files are still in the working and not yet completed`](#note-that-the-files-are-still-in-the-working-and-not-yet-completed)
+  - [Tutorials](#tutorials)
   - [Group Tutoring Projets](#group-tutoring-projets)
 
 ## [Peer Tutoring](https://github.com/REAPERali00/Tutoring/tree/main/Tutoring/src/Peer)
@@ -29,6 +30,9 @@ This repository contains the Tutoring files and related projects.
 - [Conditional Statements](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Practice/Conditional_statments.java)
 - [Loops](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Practice/Loops.java)
 - [Arrays](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Practice/Array_practice.java)
+
+## Tutorials
+- [Variables](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Tutorial/Variables.java)
 
 ## Group Tutoring Projets
 
