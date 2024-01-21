@@ -1,7 +1,18 @@
 package Winter2023;
 
-public class Week2 {
+import Tutorial.Variables;
 
+class ExampleClass {
+    public int var = 1;
+    private int varPrivate = 2;
+
+    public void someMethod() {
+        System.out.println(var);
+        System.out.println(varPrivate);
+    }
+}
+
+public class Week2 {
     public static void friday() {
         // TODO Auto-generated method stub
         // Camel case: mainProgram: methods, vars, ...
@@ -28,11 +39,19 @@ public class Week2 {
     }
 
     public static void saturday() {
-        System.out.println("hello");
+        ExampleClass ex = new ExampleClass();
+        ExampleClass ex2 = new ExampleClass();
+        ex.someMethod();
+        ex.var = 2;
+    }
+
+    public static void sunday() {
+        new Variables().vars();
+
     }
 
     public static void main(String[] args) {
-        saturday();
+        sunday();
     }
 
 }
