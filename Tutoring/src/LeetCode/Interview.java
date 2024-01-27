@@ -66,7 +66,6 @@ public class Interview {
 
 	}
 
-
 	/*
 	 * Given an integer array nums and an integer val, remove all occurrences of val
 	 * in nums in-place. The order of the elements may be changed. Then return the
@@ -79,19 +78,19 @@ public class Interview {
 	 * elements which are not equal to val. The remaining elements of nums are not
 	 * important as well as the size of nums. Return k.
 	 */
-	//My Way: 
+	// My Way:
 	public int removeElement1(int[] nums, int val) {
-		int end = nums.length-1, k = nums.length;
-		for(int i = 0; i < nums.length  && i <= end; i++){
-			while(end >= 0 && nums[end] == val) {
+		int end = nums.length - 1, k = nums.length;
+		for (int i = 0; i < nums.length && i <= end; i++) {
+			while (end >= 0 && nums[end] == val) {
 				end--;
-				k--; 
+				k--;
 			}
-			if(nums[i] == val && i < end){
-				int temp = nums[i]; 
-				nums[i] = nums[end]; 
+			if (nums[i] == val && i < end) {
+				int temp = nums[i];
+				nums[i] = nums[end];
 				nums[end] = temp;
-				end--; 
+				end--;
 				k--;
 			}
 		}
@@ -99,7 +98,7 @@ public class Interview {
 		return k;
 	}
 
-	//Solution: 
+	// Solution:
 	public int removeElement(int[] nums, int val) {
 		int i = 0;
 		for (int j = 0; j < nums.length; j++) {
@@ -114,26 +113,26 @@ public class Interview {
 	}
 
 	public int removeDuplicatesMine(int[] nums) {
-		int end = nums.length-1, val;
+		int end = nums.length - 1, val;
 		int i;
-		for(i = 0 ; i < end; i++) {
-			val = nums[i]; 
-			for(int j = i+1; j < end; j++) {
-				if(nums[j] == val) {
+		for (i = 0; i < end; i++) {
+			val = nums[i];
+			for (int j = i + 1; j < end; j++) {
+				if (nums[j] == val) {
 					swap(nums, j, end--);
 				}
 			}
 		}
-		if(end == nums.length -1)
-			return 0; 
+		if (end == nums.length - 1)
+			return 0;
 		Arrays.sort(nums, 0, nums.length - end);
 		return nums.length - i;
 	}
 
 	int removeDuplicates(int[] nums) {
 		int j = 1;
-		for(int i = 1; i < nums.length; i++){
-			if(nums[i] != nums[i - 1]){
+		for (int i = 1; i < nums.length; i++) {
+			if (nums[i] != nums[i - 1]) {
 				nums[j] = nums[i];
 				j++;
 			}
@@ -178,50 +177,53 @@ public class Interview {
 	 * may assume that the majority element always exists in the array.
 	 */
 	public int majorityElementFirstAttempt(int[] nums) {
-		int count = 0, current = nums[0]; 
-		for(int i = 0; i < nums.length; i++){
-			current = nums[i]; 
-			for(int j = 0; j < nums.length; j++){
-				if(nums[j] == nums[i])
-					count++; 
+		int count = 0, current = nums[0];
+		for (int i = 0; i < nums.length; i++) {
+			current = nums[i];
+			for (int j = 0; j < nums.length; j++) {
+				if (nums[j] == nums[i])
+					count++;
 			}
-			if(count > nums.length/ 2)
-				return current; 
-			count = 0; 
+			if (count > nums.length / 2)
+				return current;
+			count = 0;
 		}
-		return current ; 
+		return current;
 	}
 
 	public int majorityElement(int[] nums) {
-		int count = 0,candidate = 0 ;
+		int count = 0, candidate = 0;
 
 		for (int num : nums) {
 			if (count == 0) {
 				candidate = num;
 			}
-			count = (num == candidate) ? count+1: count-1; 
+			count = (num == candidate) ? count + 1 : count - 1;
 		}
-		return candidate; 
+		return candidate;
 	}
 
 	public void rotate(int[] nums, int k) {
 		for (int i = 0; i < k; i++)
 			swap(nums, i, nums.length - k);
-	}	
+	}
 
-	public int findSmallest(int[] arr){
-		int  minInd = 0; 
-		for(int i = 0; i < arr.length; i++) 
-			if(arr[i] < arr[minInd]) minInd = i; 
+	public int findSmallest(int[] arr) {
+		int minInd = 0;
+		for (int i = 0; i < arr.length; i++)
+			if (arr[i] < arr[minInd])
+				minInd = i;
 		return minInd;
 	}
 
 	public int maxProfitMyFirstSolution(int[] prices) {
-		int minInd = findSmallest(prices), max = 0; 
-		for(int i = minInd+ 1; i < prices.length; i++)
-			if(prices[i] > max) max = prices[i];
-		if(minInd == prices.length-1) return 0;  
-		return max - prices[minInd]; 
+		int minInd = findSmallest(prices), max = 0;
+		for (int i = minInd + 1; i < prices.length; i++)
+			if (prices[i] > max)
+				max = prices[i];
+		if (minInd == prices.length - 1)
+			return 0;
+		return max - prices[minInd];
 
 	}
 
@@ -261,56 +263,59 @@ public class Interview {
 
 	public boolean canJumpMySolution(int[] nums) {
 		int length = nums.length;
-		for(int i = 0; nums[i%length] != 0;){
-			i += nums[i]; 
-			if(i >= length-1) return true; 
+		for (int i = 0; nums[i % length] != 0;) {
+			i += nums[i];
+			if (i >= length - 1)
+				return true;
 		}
-		if(length==1) return true;
+		if (length == 1)
+			return true;
 		return false;
 	}
 
 	public boolean canJump(int[] nums) {
-		int max = 0; 
-		for(int i = 0; i< nums.length; i++){
-			if(i > max) return false; 
-			max = Math.max(max, i+nums[i]); 
+		int max = 0;
+		for (int i = 0; i < nums.length; i++) {
+			if (i > max)
+				return false;
+			max = Math.max(max, i + nums[i]);
 		}
 		return true;
 	}
 
 	public int jump2Solution(int[] nums) {
-		for(int i = 1; i < nums.length; i++) 
-			nums[i] = Math.max(nums[i] + i, nums[i-1]);
-		int count= 0; 
-		for(int i = 0; i < nums.length-1;){
-			count++; 
-			i = nums[i]; 
+		for (int i = 1; i < nums.length; i++)
+			nums[i] = Math.max(nums[i] + i, nums[i - 1]);
+		int count = 0;
+		for (int i = 0; i < nums.length - 1;) {
+			count++;
+			i = nums[i];
 		}
-		return count;  
+		return count;
 	}
 
 	public int hIndex(int[] citations) {
 		Arrays.sort(citations);
-		int n = citations.length, res = 0;  
-		for(int i = 0; i < n - res; i++)
-			if(citations[i] != res)
-				res = Math.max(res, Math.min(citations[i], n-i));
+		int n = citations.length, res = 0;
+		for (int i = 0; i < n - res; i++)
+			if (citations[i] != res)
+				res = Math.max(res, Math.min(citations[i], n - i));
 		return res;
 	}
 
 	public int[] productExceptSelfMySolution(int[] nums) {
 		int length = nums.length;
-		int res[] = new int[length]; 
-		Arrays.fill(res, 1); 
-		for(int i =0 , j = 0; j < length;i++) {
-			if(i >= length){
-				i%= length; 
+		int res[] = new int[length];
+		Arrays.fill(res, 1);
+		for (int i = 0, j = 0; j < length; i++) {
+			if (i >= length) {
+				i %= length;
 				j++;
-			} 
-			if(i!= j)
+			}
+			if (i != j)
 				res[i] *= nums[j];
 		}
-		return res; 
+		return res;
 	}
 
 	public int[] productExceptSelf(int[] nums) {
@@ -338,16 +343,16 @@ public class Interview {
 	}
 
 	public int canCompleteCircuitMySolution(int[] gas, int[] cost) {
-		int[] tanks = new int[gas.length]; 
-		int sum = 0; 
-		for(int i = 0; i < gas.length; i++){
-			tanks[i] = gas[i] - cost[i]; 
-			sum += tanks[i]; 
+		int[] tanks = new int[gas.length];
+		int sum = 0;
+		for (int i = 0; i < gas.length; i++) {
+			tanks[i] = gas[i] - cost[i];
+			sum += tanks[i];
 		}
 
-		for(int i = 0; sum >= 0 && i < gas.length; i++){
-			if(tanks[i] >= 0 && tanks[i] + tanks[(i+1)%gas.length] >= 0){
-				return i; 
+		for (int i = 0; sum >= 0 && i < gas.length; i++) {
+			if (tanks[i] >= 0 && tanks[i] + tanks[(i + 1) % gas.length] >= 0) {
+				return i;
 			}
 		}
 		return -1;
@@ -359,10 +364,10 @@ public class Interview {
 		int surplus = 0;
 		int start = 0;
 
-		for(int i = 0; i < n; i++){
+		for (int i = 0; i < n; i++) {
 			total_surplus += gas[i] - cost[i];
 			surplus += gas[i] - cost[i];
-			if(surplus < 0){
+			if (surplus < 0) {
 				surplus = 0;
 				start = i + 1;
 			}
@@ -371,47 +376,51 @@ public class Interview {
 	}
 
 	public int candyMySolution(int[] ratings) {
-		int n = ratings.length, total = n; 
-		for(int i =0; i < n; i++){
-			total += i > 0 && ratings[i] > ratings[i-1]? 1:0;
-			total += i < n-1 && ratings[i] > ratings[i+1]? 1:0;
+		int n = ratings.length, total = n;
+		for (int i = 0; i < n; i++) {
+			total += i > 0 && ratings[i] > ratings[i - 1] ? 1 : 0;
+			total += i < n - 1 && ratings[i] > ratings[i + 1] ? 1 : 0;
 
 		}
-		return total; 
-	} 
+		return total;
+	}
+
 	public int candy(int[] ratings) {
-		int n = ratings.length, candy = n, i = 1; 
-		while(i < n){
-			if(ratings[i] == ratings[i-1]){
-				i++; 
-				continue; 
+		int n = ratings.length, candy = n, i = 1;
+		while (i < n) {
+			if (ratings[i] == ratings[i - 1]) {
+				i++;
+				continue;
 			}
-			int peak = 0; 
-			while(ratings[i] > ratings[i-1]){
-				peak++; 
-				candy+= peak; 
-				i++; 
-				if(i==n) return candy; 
+			int peak = 0;
+			while (ratings[i] > ratings[i - 1]) {
+				peak++;
+				candy += peak;
+				i++;
+				if (i == n)
+					return candy;
 			}
-			int valley = 0; 
-			while(i < n && ratings[i] < ratings[i-1]){
-				valley++; 
-				candy+= valley; 
-				i++; 
+			int valley = 0;
+			while (i < n && ratings[i] < ratings[i - 1]) {
+				valley++;
+				candy += valley;
+				i++;
 			}
-			candy -= Math.min(peak, valley); 
+			candy -= Math.min(peak, valley);
 		}
-		return candy; 
+		return candy;
 	}
 
 	public int trapMySolution(int[] height) {
-		int water = 0, wallInd = 0, second = 0; 
-		for(int i = 0; i < height.length; i++){
-			if(height[i] >= height[wallInd] && ++second==2){
-				for(int j = wallInd; j < i; j++) water+= height[wallInd] - height[j];
-				second = 0; 
-			} 
-			if(height[i] >= height[wallInd]) wallInd = i;
+		int water = 0, wallInd = 0, second = 0;
+		for (int i = 0; i < height.length; i++) {
+			if (height[i] >= height[wallInd] && ++second == 2) {
+				for (int j = wallInd; j < i; j++)
+					water += height[wallInd] - height[j];
+				second = 0;
+			}
+			if (height[i] >= height[wallInd])
+				wallInd = i;
 
 		}
 		return water;
@@ -433,30 +442,30 @@ public class Interview {
 		return water;
 	}
 
-	public int convertRoman(char c){
-		int n = 0; 
-		switch(c){
-		case 'I': 
-			n = 1;
-			break;
-		case 'V': 
-			n = 5;
-			break;
-		case 'X': 
-			n = 10;
-			break;
-		case 'L': 
-			n = 50;
-			break;
-		case 'C': 
-			n = 100;
-			break;
-		case 'D': 
-			n = 500;
-			break;
-		case 'M': 
-			n = 1000;
-			break;
+	public int convertRoman(char c) {
+		int n = 0;
+		switch (c) {
+			case 'I':
+				n = 1;
+				break;
+			case 'V':
+				n = 5;
+				break;
+			case 'X':
+				n = 10;
+				break;
+			case 'L':
+				n = 50;
+				break;
+			case 'C':
+				n = 100;
+				break;
+			case 'D':
+				n = 500;
+				break;
+			case 'M':
+				n = 1000;
+				break;
 		}
 		return n;
 	}
@@ -471,68 +480,70 @@ public class Interview {
 		return res;
 	}
 
-
 	public String intToRomanMySolution(int num) {
 		HashMap<Integer, Character> map = new HashMap();
-		String res = ""; 
-		map.put(1,'I');
-		map.put(5,'V');
-		map.put(10,'X');
-		map.put(50,'L');
-		map.put(100,'C');
-		map.put(500,'D');
-		map.put(1000,'M');
+		String res = "";
+		map.put(1, 'I');
+		map.put(5, 'V');
+		map.put(10, 'X');
+		map.put(50, 'L');
+		map.put(100, 'C');
+		map.put(500, 'D');
+		map.put(1000, 'M');
 		int lim = 0;
-		for(int i = 3;num > 0 && i >-1; ) {
+		for (int i = 3; num > 0 && i > -1;) {
 			lim = (int) Math.pow(10, i);
-			if(num % lim != num) {
-				if(num % (lim*5) != num) {
+			if (num % lim != num) {
+				if (num % (lim * 5) != num) {
 					lim *= 5;
 				}
 				res += map.get(lim);
-				num -= lim; 
-			}
-			else i--;
+				num -= lim;
+			} else
+				i--;
 		}
 
-
-		return res; 
+		return res;
 	}
 
 	public String intToRoman(int num) {
-		int []values={1000,900,500,400,100,90,50,40,10,9,5,4,1};
-		String []notations={"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
-		StringBuilder sb=new StringBuilder();
+		int[] values = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+		String[] notations = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+		StringBuilder sb = new StringBuilder();
 
-		for(int i=0;i<values.length;i++){
-			while(num>=values[i])
-			{
-				num-=values[i];
+		for (int i = 0; i < values.length; i++) {
+			while (num >= values[i]) {
+				num -= values[i];
 				sb.append(notations[i]);
 			}
 		}
 
 		return sb.toString();
 	}
+
 	public int lengthOfLastWordSimple(String s) {
-		String[] arr = s.split(" "); 
-		return arr[arr.length-1].length();
+		String[] arr = s.split(" ");
+		return arr[arr.length - 1].length();
 	}
+
 	public int lengthOfLastWord(String s) {
-		int length = 0, space = 0; 
-		for(int i = s.length()-1; i > -1 ; i--){
-			if(s.charAt(i) != ' ') length++; 
-			else if(length > 0)return length; 
+		int length = 0, space = 0;
+		for (int i = s.length() - 1; i > -1; i--) {
+			if (s.charAt(i) != ' ')
+				length++;
+			else if (length > 0)
+				return length;
 		}
 		return length;
 	}
+
 	public String longestCommonPrefix(String[] strs) {
 		Arrays.sort(strs);
 		String s1 = strs[0];
-		String s2 = strs[strs.length-1];
+		String s2 = strs[strs.length - 1];
 		int idx = 0;
-		while(idx < s1.length() && idx < s2.length()){
-			if(s1.charAt(idx) == s2.charAt(idx)){
+		while (idx < s1.length() && idx < s2.length()) {
+			if (s1.charAt(idx) == s2.charAt(idx)) {
 				idx++;
 			} else {
 				break;
@@ -540,7 +551,7 @@ public class Interview {
 		}
 		return s1.substring(0, idx);
 	}
-	
+
 	public String spinWords(String sentence) {
 		return Arrays.stream(sentence.split(" "))
 				.map(i -> i.length() > 4 ? new StringBuilder(i).reverse().toString() : i)
@@ -562,7 +573,7 @@ public class Interview {
 
 		return res.toArray(new String[res.size()]);
 	}
-	
+
 	/*
 	 * Complete the solution so that it splits the string into pairs of two
 	 * characters. If the string contains an odd number of characters then it should
@@ -570,10 +581,10 @@ public class Interview {
 	 * ('_').
 	 */
 	public String[] solution(String s) {
-        s = (s.length() % 2 == 0)?s:s+"_";
-        return s.split("(?<=\\G.{2})");
-    }
-	
+		s = (s.length() % 2 == 0) ? s : s + "_";
+		return s.split("(?<=\\G.{2})");
+	}
+
 	/*
 	 * Write a function, which takes a non-negative integer (seconds) as input and
 	 * returns the time in a human-readable format (HH:MM:SS)
@@ -583,44 +594,51 @@ public class Interview {
 	}
 
 	public String convert(String s, int nRows) {
-	    char[] c = s.toCharArray();
-	    int len = c.length;
-	    StringBuffer[] sb = new StringBuffer[nRows];
-	    for (int i = 0; i < sb.length; i++) sb[i] = new StringBuffer();
-	    
-	    int i = 0;
-	    while (i < len) {
-	        for (int idx = 0; idx < nRows && i < len; idx++) // vertically down
-	            sb[idx].append(c[i++]);
-	        for (int idx = nRows-2; idx >= 1 && i < len; idx--) // obliquely up
-	            sb[idx].append(c[i++]);
-	    }
-	    for (int idx = 1; idx < sb.length; idx++)
-	        sb[0].append(sb[idx]);
-	    return sb[0].toString();
+		char[] c = s.toCharArray();
+		int len = c.length;
+		StringBuffer[] sb = new StringBuffer[nRows];
+		for (int i = 0; i < sb.length; i++)
+			sb[i] = new StringBuffer();
+
+		int i = 0;
+		while (i < len) {
+			for (int idx = 0; idx < nRows && i < len; idx++) // vertically down
+				sb[idx].append(c[i++]);
+			for (int idx = nRows - 2; idx >= 1 && i < len; idx--) // obliquely up
+				sb[idx].append(c[i++]);
+		}
+		for (int idx = 1; idx < sb.length; idx++)
+			sb[0].append(sb[idx]);
+		return sb[0].toString();
 	}
 
 	public boolean isPalindrome_StringBuilder(String s) {
 		StringBuilder sb = new StringBuilder();
 
-		for(char ch : s.toCharArray()){
-			if(Character.isLetterOrDigit(ch)){
+		for (char ch : s.toCharArray()) {
+			if (Character.isLetterOrDigit(ch)) {
 				sb.append(Character.toLowerCase(ch));
 			}
 		}
-		if(sb.toString().equals(sb.reverse().toString())){
+		if (sb.toString().equals(sb.reverse().toString())) {
 			return true;
 		}
 		return false;
 
 	}
-	
-	
-	
 
-	
-	
+	public boolean isValidSudoku(char[][] board) {
+		Set seen = new HashSet();
+		for (int i = 0; i < 9; ++i) {
+			for (int j = 0; j < 9; ++j) {
+				if (board[i][j] != '.') {
+					String b = "(" + board[i][j] + ")";
+					if (!seen.add(b + i) || !seen.add(j + b) || !seen.add(i / 3 + b + j / 3))
+						return false;
+				}
+			}
+		}
+		return true;
+	}
 
 }
-
-
