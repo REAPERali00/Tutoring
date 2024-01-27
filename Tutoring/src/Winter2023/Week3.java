@@ -29,6 +29,25 @@ public class Week3 {
 
     }
 
+    public static void saturday() {
+        /*
+         * start
+         * Decalartions:
+         * num number1
+         * num number2
+         * String name
+         * output "Hello world"
+         * 
+         * output "Enter the first number"
+         * intput number1
+         * output "Enter the Second number"
+         * intput nubmer2
+         * 
+         * output "The addition is " + number1 + number2
+         * stop
+         */
+    }
+
     public static void main(String[] args) {
         friday();
     }
