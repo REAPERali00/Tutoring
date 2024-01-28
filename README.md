@@ -11,7 +11,8 @@ This repository contains the Tutoring files and related projects.
   - [Practice Files](#practice-files)
     - [`Note that the files are still in the working and not yet completed`](#note-that-the-files-are-still-in-the-working-and-not-yet-completed)
   - [Tutorials](#tutorials)
-  - [Group Tutoring Projets](#group-tutoring-projets)
+  - [Group Tutoring](#group-tutoring-1)
+    - [This weeks project:](#this-weeks-project)
 
 ## [Peer Tutoring](https://github.com/REAPERali00/Tutoring/tree/main/Tutoring/src/Peer)
 
@@ -35,12 +36,15 @@ This repository contains the Tutoring files and related projects.
 - [Project Set up](./Tutoring/src/Tutorial/ProjectSetup.md)
 - [Variables](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Tutorial/Variables.java)
 
-## Group Tutoring Projets
+## Group Tutoring 
+### This weeks project: 
+      - Calculator command line: takes two numbers from the user and an operator, prints out the result of the operation. 
 
 - [Guessing game](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Weekly/Guessing_Game.java)
-- [Rock Paper Sacissors](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Weekly/RPS.java)
+- [Rock Paper Scissors](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Weekly/RPS.java)
 - [Exercise](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Exercise/Exercise.java)
 - [Tic Tac To\_ command line](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/TicTacToe/TicTacToe.java)
 - [Calendar](https://github.com/REAPERali00/Tutoring/tree/main/Calendar/src/Calendar)
 - [Hang Man Game](https://github.com/REAPERali00/Tutoring/blob/main/Hangman/src/HangMan.java)
-- [Calculator](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Calculator/Calculator.java)
+- [Calculator_GUI](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Calculator/Calculator.java)
+- [Calculator_CLI](./Tutoring/src/Calculator/Calculator_CLI.java)

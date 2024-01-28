@@ -48,6 +48,10 @@ public class Week3 {
          */
     }
 
+    public static void sunday() {
+
+    }
+
     public static void main(String[] args) {
         friday();
     }
