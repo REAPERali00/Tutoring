@@ -38,7 +38,7 @@ This repository contains the Tutoring files and related projects.
 
 ## Group Tutoring 
 ### This weeks project: 
-      - Calculator command line: takes two numbers from the user and an operator, prints out the result of the operation. 
+    - Calculator command line: takes two numbers from the user and an operator, prints out the result of the operation. 
 
 - [Guessing game](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Weekly/Guessing_Game.java)
 - [Rock Paper Scissors](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Weekly/RPS.java)
