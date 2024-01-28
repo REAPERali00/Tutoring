@@ -11,17 +11,17 @@ public class Week3 {
      */
     public static void friday() {
         // Student Class: name, id, gpa, course name.
-        // Consctor, get/set, to string.
+        // Constructor, get/set, to string.
         // Instance of class Student, an object.
         int n = 34;
         Student student = new Student();
-        Student student2 = new Student(20, "Alireza", 90, "cst816");
+        Student student2 = new Student(20, "Alireza", 90, "cst8116");
 
         System.out.println(student.add(1));
         student.setId(12);
         System.out.println(student.getId());
         Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter the pasword");
+        System.out.println("Please enter the password");
         student.setPassword(scan.nextLine());
 
         // new Student().id = 3;
@@ -32,27 +32,50 @@ public class Week3 {
     public static void saturday() {
         /*
          * start
-         * Decalartions:
+         * Declarations:
          * num number1
          * num number2
          * String name
          * output "Hello world"
          * 
          * output "Enter the first number"
-         * intput number1
+         * // * input number1
          * output "Enter the Second number"
-         * intput nubmer2
+         * input number2
          * 
          * output "The addition is " + number1 + number2
          * stop
          */
     }
 
+    /**
+     * Make a book class:
+     * features:
+     * 1. Name
+     * 2. Author
+     * 3. Content
+     * 
+     * Constructor: Default and a none default
+     * Getter and a Setter (accessor, Modifier)
+     */
     public static void sunday() {
+        Scanner scan = new Scanner(System.in);
+        Student st = new Student(12, "Ali", 90, "cst8116");
+        st.setPassword("0000");
+        st.print();
+        new Student().print();
+        // 3 PRints:
+        int num = 12;
+        System.out.print("Enter a number: ");
+        // scan.nextInt();
+        System.out.println("number: " + num + " is even ");
+        System.out.printf("number: \"%d\" is %s\n", 12341, "even");
+        System.out.println(st);
+        System.out.println(new Student());
 
     }
 
     public static void main(String[] args) {
-        friday();
+        sunday();
     }
 }

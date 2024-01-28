@@ -15,7 +15,7 @@ public class Student {
     }
 
     public void setId(int id) {
-        this.id = 32;
+        this.id = id;
     }
 
     public void setPassword(String password) {
@@ -26,13 +26,14 @@ public class Student {
 
     // Default constructor
     public Student() {
-        id = 120;
-        name = "No name";
-        gpa = -1;
-        courseName = "N/A";
+        this(120, "No name", -1, "N/A");
+        // id = 120;
+        // name = "No name";
+        // gpa = -1;
+        // courseName = "N/A";
     }
 
-    // NOne default constructor:
+    // // NOne default constructor:
     public Student(int id, String name, double gpa, String courseName) {
         this.id = id;
         this.name = name;
@@ -40,8 +41,29 @@ public class Student {
         this.courseName = courseName;
     }
 
+    public Student(int id, String name) {
+        this();
+        this.id = id;
+        this.name = name;
+
+    }
+
     public int add(int num1) {
         return num1 + id;
+    }
+
+    public String getFullName(String fname, String lname) {
+        return fname + " " + lname;
+    }
+
+    public void print() {
+        System.out.printf("%d.%s: GPA: %.2f Course: %s Password: %s\n", id, name, gpa, courseName, password);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%d.%s: GPA: %.2f Course: %s Password: %s\n", id, name,
+                gpa, courseName, password);
     }
 
     private String encrypt(String password) {
@@ -59,4 +81,5 @@ public class Student {
         }
         return sb.toString();
     }
+
 }
