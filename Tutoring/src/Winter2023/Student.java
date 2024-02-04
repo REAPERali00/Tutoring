@@ -2,7 +2,7 @@ package Winter2023;
 
 public class Student {
     // Instance Variables / attributes
-    private int id;
+    int id;
     private String name;
     private double gpa;
     private String courseName;
