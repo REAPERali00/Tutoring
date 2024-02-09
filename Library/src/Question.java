@@ -13,7 +13,7 @@ public class Question {
         this.correctAnswer = correctAnswer;
     }
 
-    public String getOptions() {
+    private String getOptions() {
         char opt = 'A';
         StringBuilder sb = new StringBuilder();
         for (String option : options) {
