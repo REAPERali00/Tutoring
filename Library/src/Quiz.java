@@ -69,7 +69,7 @@ public class Quiz {
     }
 
     public void quit() {
-        System.out.println("Your score was: " + score + "out of " + maxScore);
+        System.out.println("Your score was: " + score + " out of " + maxScore);
         System.out.println("Bye! thanks for participating!");
         input.close();
         System.exit(0);
