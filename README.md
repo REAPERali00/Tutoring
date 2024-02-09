@@ -39,7 +39,7 @@ This repository contains the Tutoring files and related projects.
 ## Group Tutoring 
 ### This weeks project: 
 
-   **[Quiz Application](https://github.com/REAPERali00/Tutoring/tree/main/Library/src):** a small interactive quiz application designed to help users test their knowledge on various topics.
+   **[Quiz Application](https://github.com/REAPERali00/Tutoring/tree/main/Library/src):** a small interactive quiz command line application, do a project and prepare for the midterm! 
 
 
 - [Guessing game](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Weekly/Guessing_Game.java)
