@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Quiz {
     private ArrayList<Question> questions;
     private int score;
+    private int maxScore;
     private Scanner input;
 
     public Quiz() {
@@ -17,6 +18,7 @@ public class Quiz {
 
     public void add(Question question) {
         questions.add(question);
+        maxScore++;
     }
 
     public char getChoice() {
@@ -39,7 +41,6 @@ public class Quiz {
                 score--;
             }
         }
-        System.out.println("Your score was: " + score);
     }
 
     private void loadQuestions(String path) {
@@ -68,7 +69,7 @@ public class Quiz {
     }
 
     public void quit() {
-        System.out.println("Your score was: " + score);
+        System.out.println("Your score was: " + score + "out of " + maxScore);
         System.out.println("Bye! thanks for participating!");
         input.close();
         System.exit(0);
