@@ -38,7 +38,8 @@ This repository contains the Tutoring files and related projects.
 
 ## Group Tutoring 
 ### This weeks project: 
-    - Calculator command line: takes two numbers from the user and an operator, prints out the result of the operation. 
+
+- `[Quiz Application](https://github.com/REAPERali00/Tutoring/tree/main/Library/src): a small interactive quiz application designed to help users test their knowledge on various topics.`
 
 - [Guessing game](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Weekly/Guessing_Game.java)
 - [Rock Paper Scissors](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Weekly/RPS.java)
@@ -48,3 +49,4 @@ This repository contains the Tutoring files and related projects.
 - [Hang Man Game](https://github.com/REAPERali00/Tutoring/blob/main/Hangman/src/HangMan.java)
 - [Calculator_GUI](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Calculator/Calculator.java)
 - [Calculator_CLI](./Tutoring/src/Calculator/Calculator_CLI.java)
+- [Quiz Application](https://github.com/REAPERali00/Tutoring/tree/main/Library/src)
