@@ -27,7 +27,7 @@ public class Question {
     }
 
     public String getQuestion() {
-        return String.format("%s \n%s", question, getOptions());
+        return String.format("\n%s \n%s", question, getOptions());
     }
 
 }
