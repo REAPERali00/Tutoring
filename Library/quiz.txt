@@ -1,0 +1,2 @@
+Are you sane?;Yes;No;A;
+Do you like me?;Yes;No;A;
