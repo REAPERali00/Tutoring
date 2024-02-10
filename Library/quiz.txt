@@ -2,6 +2,7 @@ What is the output from the following Java statement:System.out.println("(>\'.\'
 Given: String abc = "1 2 3" what will print out from the following statement? System.out.println(abc  + abc.length());abc.length();1 2 3 5;1 2 35 ;1 2 33 ;123;C;
 Which of the arithmetic expressions below will assign a value of 1.0 into variable double result?;result = 5.0 * 2;result = 5.0 / 2;result = 5.0 - 2;result = 5.0 % 2;D;
 What is the output from the statement: System.out.println((double) (5 / 2));2.0;5 / 2;2.5;2;A;
+What is the output from the statement: System.out.println(5D/2);2.0;Compile error;2.5;2;runtime error;C;
 Which answer correctly orders the Java integer data types from largest memory use to smallest memory use?;int, short, byte, long;short, byte, long, int;byte, short, int, long;long, int, short, byte;D;
 Which line below specifies to the compiler a literal-value having data-type long?;3F;3L;3;3D;B;
 Which line of code below correctly declares a variable that is a constant in Java programming?;const double SALES_TAX = 0.14;double SALES_TAX = 0.14;final double SALES_TAX = 0.14;static double SALES_TAX = 0.14;C;
