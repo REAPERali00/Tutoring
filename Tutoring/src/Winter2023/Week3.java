@@ -10,8 +10,8 @@ public class Week3 {
      * 2. Topic of the Week: Classes and objects. / Reference types.
      */
     public static void friday() {
-        // Student Class: name, id, gpa, course name.
-        // Constructor, get/set, to string.
+        // student class: name, id, gpa, course name.
+        // constructor, get/set, to string.
         // Instance of class Student, an object.
         int n = 34;
         Student student = new Student();

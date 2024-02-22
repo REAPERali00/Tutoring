@@ -14,12 +14,12 @@ This repository contains the Tutoring files and related projects.
   - [Group Tutoring](#group-tutoring-1)
     - [This weeks project:](#this-weeks-project)
 
-## [Peer Tutoring](https://github.com/REAPERali00/Tutoring/tree/main/Tutoring/src/Peer)
+## [Peer Tutoring](https://github.com/REAPERali00/Tutoring/tree/main/PeerTutoring/src/Peer)
 
 - Click on the title to navigate to peer tutoring files
 - Find your files under Peer/(your name).java
 
-## [Group Tutoring](https://github.com/REAPERali00/Tutoring/tree/main/Tutoring/src/Winter2023)
+## [Group Tutoring](https://github.com/REAPERali00/Tutoring/tree/main/Group%20Tutoring/src)
 
 - Click on Header to navigate to the Group tutoring files
 - Find the files under week(number).java, and under method name the Daily Material we went through. ex: week1.java, Friday()
