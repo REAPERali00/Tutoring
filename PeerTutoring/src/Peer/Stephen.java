@@ -10,7 +10,17 @@ public class Stephen {
     }
 
     public static void main(String[] args) {
-        new Stephen().studentExample();
+        double result = 123.626;
+        System.out.printf("the result is %.3f\n", result);
+        // Conditional statement: boolean
+        // loops: while, for, Do while
+        // arrays:
+        int arr[] = { 1, 2, 3, 4 };
+        Student stdArray[] = new Student[10];
+        stdArray[0] = new Student();
+        stdArray[0].printHello();
+
+        System.out.println(arr[1]);
     }
 
     private static class Student {
