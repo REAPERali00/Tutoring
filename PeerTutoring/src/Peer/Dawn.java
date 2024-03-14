@@ -1,5 +1,6 @@
 package Peer;
 
+import java.rmi.server.ExportException;
 import java.util.Scanner;
 
 public class Dawn {
@@ -52,7 +53,7 @@ public class Dawn {
 
     }
 
-    public static void main(String[] args) {
+    void inputRead() {
         Scanner scan = new Scanner(System.in);
         int num1 = 0, num2 = 0;
 
@@ -62,5 +63,52 @@ public class Dawn {
         num2 = scan.nextInt();
 
         System.out.println("the addition is " + (num1 + num2));
+    }
+
+    /**
+     * Studfent
+     * --
+     * -id:int
+     * -name:String
+     * --
+     * getId():int
+     * -setId(id:int):void
+     * 
+     */
+    void start() {
+        System.out.println(getYearMessage(1999));
+        Cabbage cab = new Cabbage(1.9, 2);
+        System.out.println(cab.calcPrice());
+        cab.name = "name of the cabbage";
+        Cabbage cab2 = new Cabbage();
+        System.out.println(Cabbage.name);
+        double vol = 1.2;
+        final double EXPECTED = 2;
+        if (Math.abs(vol - EXPECTED) > 1)
+            System.out.println("outside expectations ");
+
+        // for(){
+
+        // }
+        // while(){
+
+        // }
+        // do {
+
+        // }while(answer != "no");
+    }
+
+    String getYearMessage(int year) {
+        int[] arr = { 2000, 1999, 1700 };
+        String[] message = { "message for year 2000", "message for year 1999", "message for year 1700" };
+        for (int i = 0; i < arr.length; i++) {
+            if (year == arr[i])
+                return message[i];
+        }
+        return "year not available";
+    }
+
+    public static void main(String[] args) {
+        new Dawn().start();
     }
 }

@@ -36,7 +36,7 @@ public class Yasmine implements Starting {
         Example ex2 = new Example();
         Example.num = 12;
         ex.setNumEven(11);
-        System.out.println(ex.num);
+        System.out.println(ex.getNum());
         ex.print("Yasmine");
 
     }
