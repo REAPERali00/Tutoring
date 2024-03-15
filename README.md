@@ -42,12 +42,12 @@ This repository contains the Tutoring files and related projects.
    **[Quiz Application](https://github.com/REAPERali00/Tutoring/tree/main/Library/src):** a small interactive quiz command line application, do a project and prepare for the midterm! 
 
 
-- [Guessing game](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Weekly/Guessing_Game.java)
-- [Rock Paper Scissors](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Weekly/RPS.java)
-- [Exercise](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Exercise/Exercise.java)
-- [Tic Tac To\_ command line](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/TicTacToe/TicTacToe.java)
-- [Calendar](https://github.com/REAPERali00/Tutoring/tree/main/Calendar/src/Calendar)
-- [Hang Man Game](https://github.com/REAPERali00/Tutoring/blob/main/Hangman/src/HangMan.java)
-- [Calculator_GUI](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Calculator/Calculator.java)
-- [Calculator_CLI](./Tutoring/src/Calculator/Calculator_CLI.java)
-- [Quiz Application](https://github.com/REAPERali00/Tutoring/tree/main/Library/src)
+- [Guessing game](./projects/GuessingGame/)
+- [Rock Paper Scissors](./projects/RPS/)
+- [Exercise](./projects/Exercise/)
+- [Tic Tac To\_ command line](./projects/TicTacTo/)
+- [Calendar](./projects/Calendar/)
+- [Hang Man Game](./projects/Hangman/)
+- [Calculator_GUI](./projects/Calculator/src/Calculator.java)
+- [Calculator_CLI](./projects/Calculator/src/Calculator_CLI.java)
+- [Quiz Application](./projects/QuizApplication/)
