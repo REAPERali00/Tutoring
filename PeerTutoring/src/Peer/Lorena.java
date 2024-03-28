@@ -19,15 +19,21 @@ public class Lorena {
         public int add(int num1, int num2) {
             return num1 + num2;
         }
+
+        public void methodExample() {
+            System.out.println("");
+            // Primtives and references.
+            int num = 0;
+            // num = 12;
+            System.out.println(num);
+            Example example = new Example();
+            System.out.println(example.add(1, 2));
+
+        }
+
     }
 
     public static void main(String[] args) {
-        System.out.println("");
-        // Primtives and references.
-        int num = 0;
-        // num = 12;
-        System.out.println(num);
-        Example example = new Example();
-        System.out.println(example.add(1, 2));
+
     }
 }
