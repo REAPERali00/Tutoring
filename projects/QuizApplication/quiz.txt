@@ -17,3 +17,5 @@ What term is used to refer to the computer instructions that are executed by a C
 Declaring a class creates the objects.;True;False;B;
 Which one of the following variable declarations and initializations contains a syntax mistake?;char number1 = 65;int number1 = 33.0;int number1 = 'A';double number1 = 15;B;
 What is the output of the following Java code snippet? n = 1, System.out.printf("%d, %d, %d, %d, %d,", n, --n, n--, n++, ++n);1, 0, 0, -1, 1;0, 0, -1, 1, 2;1, 1, 0, 0, 2;0, -1, 0, 1, 2;A;
+what is the output of the following: System.out.println(017-015);2;Error;-6;017-015;C;
+what is the output of the following: System.out.println(0x12);18;Error;0x12;12.0;12;A;
