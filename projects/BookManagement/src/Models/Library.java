@@ -12,11 +12,13 @@ public class Library {
     }
 
     public void addBook(Book book) {
-        books.add(book);
+        if (!books.contains(book))
+            books.add(book);
     }
 
     public void removeBook(Book book) {
-        books.remove(book);
+        if (books.contains(book))
+            books.remove(book);
     }
 
     public Book borrowBook(int id) {
@@ -81,4 +83,11 @@ public class Library {
         return borrowedBooks;
     }
 
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < books.size(); i++) {
+            sb.append(books.get(i) + "\n");
+        }
+        return sb.toString();
+    }
 }

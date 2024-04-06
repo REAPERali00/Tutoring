@@ -3,7 +3,7 @@ package Models;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Book {
-    private static final AtomicInteger count = new AtomicInteger(1000);
+    private static final AtomicInteger count = new AtomicInteger(0);
     private int ID;
     private String title;
     private String author;
@@ -42,6 +42,10 @@ public class Book {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public String toString() {
+        return String.format("%d: %s by %s (%d)", ID, title, author, year);
     }
 
 }

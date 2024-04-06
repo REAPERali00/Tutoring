@@ -1,12 +1,13 @@
 import java.util.Random;
 
 import Models.Book;
+import Models.Library;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        for (int i = 0; i < 100; i++) {
-            int id = new Book("Pretty", "author", 100).getID();
-            System.out.println(id);
-        }
+        Book book = new Book("J.K. Rowling", "Harry Potter", 1900);
+        Library lib = new Library();
+        lib.addBook(book);
+        System.out.println(lib);
     }
 }
