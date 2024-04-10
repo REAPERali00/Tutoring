@@ -1,6 +1,15 @@
 package Peer;
 
+import java.util.Scanner;
+
 public class Abdirahman {
+
+    private static Scanner scan = new Scanner(System.in);
+
+    void start() {
+        driver();
+    }
+
     private static class Student {
         public double gpa;
     }
@@ -15,10 +24,6 @@ public class Abdirahman {
             return letters[i];
         }
         return 'F';
-    }
-
-    void start() {
-        testAge();
     }
 
     void division(int n) {
@@ -64,7 +69,74 @@ public class Abdirahman {
 
     }
 
+    private static class FishNet {
+        private int largeFishCount;
+        private int mediumFishCount;
+        public final static double LARGE_FISH_COST = 42.5;
+        public final static double MEDIUM_FISH_COST = 15.50;
+
+        public FishNet() {
+            largeFishCount = 2;
+            mediumFishCount = 5;
+        }
+
+        public FishNet(int largeFishCount, int mediumFishCount) {
+            this.largeFishCount = largeFishCount;
+            this.mediumFishCount = mediumFishCount;
+        }
+
+        public int getLargeFishCount() {
+            return largeFishCount;
+        }
+
+        public void setLargeFishCount(int largeFishCount) {
+            this.largeFishCount = largeFishCount;
+        }
+
+        public int getMediumFishCount() {
+            return mediumFishCount;
+        }
+
+        public void setMediumFishCount(int mediumFishCount) {
+            this.mediumFishCount = mediumFishCount;
+        }
+
+        public double calculateValue() {
+            return LARGE_FISH_COST * largeFishCount + MEDIUM_FISH_COST * mediumFishCount;
+        }
+
+        public String toString() {
+            return String.format("The total value of the catch is $%.2f",
+                    calculateValue());
+        }
+    }
+
+    private FishNet getFishFromUser() {
+        int large = 0, medium = 0;
+        String choice = "";
+        do {
+            System.out.print("Ente fish size (1.large 2.medium): ");
+            int userInput = scan.nextInt();
+            if (userInput == 1)
+                large++;
+            else if (userInput == 2)
+                medium++;
+            else
+                System.out.println("Option not available");
+            System.out.print("continue? (y/n)");
+            choice = scan.next();
+        } while (!choice.equalsIgnoreCase("n"));
+
+        return new FishNet(large, medium);
+    }
+
+    void driver() {
+        System.out.println(getFishFromUser());
+
+    }
+
     public static void main(String[] args) {
         new Abdirahman().start();
+        scan.close();
     }
 }
