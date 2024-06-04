@@ -14,7 +14,7 @@ This repository contains the Tutoring files and related projects.
   - [Group Tutoring](#group-tutoring-1)
     - [This weeks project:](#this-weeks-project)
 
-## [Peer Tutoring](https://github.com/REAPERali00/Tutoring/tree/main/PeerTutoring/src/Peer)
+## [Peer Tutoring](./peer_latest/peer/src/main/java/peer/)
 
 - Click on the title to navigate to peer tutoring files
 - Find your files under Peer/(your name).java
