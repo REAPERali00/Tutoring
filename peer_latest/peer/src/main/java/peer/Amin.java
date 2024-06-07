@@ -21,11 +21,25 @@ public class Amin {
     Student student = new Student();
     Student student2 = new Student();
     student2.setId(13);
-    System.out.println();
+    System.out.println(new Student().getId());
+  }
+
+  public int add(int num1, int num2) {
+    return num1 + num2;
+  }
+
+  public int div(int num1, int num2) {
+    if (num2 == 0)
+      return 0;
+    return num1 / num2;
   }
 
   public void run() {
-    exerciseRunner();
+    // exerciseRunner();
+    double num = (double) 5.0 / 2;
+    int var = 'a' - 32;
+    // System.out.println(var);
+    System.out.println("hello\n".repeat(10));
   }
 
   public void exerciseRunner() {
