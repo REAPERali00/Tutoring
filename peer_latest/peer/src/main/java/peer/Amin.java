@@ -18,6 +18,15 @@ public class Amin {
    * calculates the calories burnt
    */
   public void studentBasics() {
+    /**
+     * 1.how to make a class
+     * 2. how to make an object
+     * 3. heap and stack differences
+     * 4. primitive and reference types
+     * 5. what new Student() does
+     *
+     *
+     */
     Student student = new Student();
     Student student2 = new Student();
     student2.setId(13);
@@ -34,12 +43,23 @@ public class Amin {
     return num1 / num2;
   }
 
-  public void run() {
+  public void examBasics() {
+    /*
+     * Things we went over:
+     * 1. basics of variables and divistions
+     * 2. code wars to practice coding
+     * 3. where to find csi
+     * 4. vim short custs and eclipse pluguin
+     * 5. Tetsting
+     */
     // exerciseRunner();
     double num = (double) 5.0 / 2;
     int var = 'a' - 32;
     // System.out.println(var);
     System.out.println("hello\n".repeat(10));
+  }
+
+  public void run() {
   }
 
   public void exerciseRunner() {
