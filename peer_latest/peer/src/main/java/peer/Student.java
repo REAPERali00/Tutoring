@@ -1,14 +1,25 @@
 package peer;
 
 public class Student {
-  private int id; 
-  private String name;
+  private int id;
+  private String name = "john";
 
-  public int getId (){
-    return id; 
+  public void printHello() {
+    System.out.println("hi, " + name + " how are you?");
   }
-  public void setId(int id){
-    this.id = id; 
+
+  public void printHello(String name) {
+    System.out.println("hi, " + name + " how are you?");
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    if (id < 0)
+      return;
+    this.id = id;
   }
 
 }
