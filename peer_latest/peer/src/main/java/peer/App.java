@@ -10,6 +10,6 @@ public class App {
   }
 
   public static void main(String[] args) {
-    new Amin().run();
+    new Palwasha().run();
   }
 }
