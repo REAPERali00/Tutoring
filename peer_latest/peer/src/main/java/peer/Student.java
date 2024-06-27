@@ -22,4 +22,11 @@ public class Student {
     this.id = id;
   }
 
+  public Student() {
+  }
+
+  public Student(int id, String name) {
+    this.id = id;
+    this.name = name;
+  }
 }

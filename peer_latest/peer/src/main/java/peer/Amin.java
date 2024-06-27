@@ -59,7 +59,12 @@ public class Amin {
     System.out.println("hello\n".repeat(10));
   }
 
+  // 🏃
   public void run() {
+    stBuilder().printHello();
+    {
+      System.out.println("hi");
+    }
   }
 
   public void exerciseRunner() {
@@ -75,6 +80,10 @@ public class Amin {
     } catch (Exception e) {
       e.printStackTrace();
     }
+  }
+
+  public Student stBuilder() {
+    return new Student(10, "Ali");
   }
 
   @Override
