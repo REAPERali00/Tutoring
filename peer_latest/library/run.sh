@@ -3,6 +3,7 @@
 # Function to run the main application
 main() {
   echo "Running main application..."
+  mvn compile
   mvn exec:java -Dexec.mainClass="system.App"
 }
 
