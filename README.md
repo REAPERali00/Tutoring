@@ -33,14 +33,15 @@ This repository contains the Tutoring files and related projects.
 - [Arrays](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Practice/Array_practice.java)
 
 ## Tutorials
+
 - [Project Set up](./Tutoring/src/Tutorial/ProjectSetup.md)
 - [Variables](https://github.com/REAPERali00/Tutoring/blob/main/Tutoring/src/Tutorial/Variables.java)
 
-## Group Tutoring 
-### This weeks project: 
+## Group Tutoring
 
-   **[Quiz Application](https://github.com/REAPERali00/Tutoring/tree/main/Library/src):** a small interactive quiz command line application, do a project and prepare for the midterm! 
+### This weeks project
 
+**[Quiz Application](./projects/QuizApplication/):** a small interactive quiz command line application, do a project and prepare for the midterm!
 
 - [Guessing game](./projects/GuessingGame/)
 - [Rock Paper Scissors](./projects/RPS/)
